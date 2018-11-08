@@ -1,11 +1,15 @@
 .SignedInLinks {
   display: flex;
   align-items: center;
-  height: 36px;
+  height: 30px;
   a {
     margin: 0 8px;
     text-transform: uppercase;
     color: $gray_dark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
   }
 } 
 .User {
@@ -13,7 +17,7 @@
   border-radius: 100px;
   display: inline-block;
   font-size: 12px;
-  height: 36px;
+  height: 36px !important;
   width: 36px;
   text-align: center;
   line-height: 3;
@@ -21,7 +25,7 @@
 .btnCreate {
   background-color: $gray_medium;
   color: #fff !important;
-  padding: 6px 8px;
+  padding: 0px 8px;
   border-radius: 4px;
   font-size: 13px;
   text-transform: uppercase;
@@ -41,7 +45,15 @@
       font-size: 16px;
       margin-right: 4px;
       position: relative;
-      top: 2px;
+      top: 1px;
+    }
+  }
+}
+:global {
+  .bx-log-out {
+    font-size: 22px !important;
+    &:hover {
+      color: $blue;
     }
   }
 }
