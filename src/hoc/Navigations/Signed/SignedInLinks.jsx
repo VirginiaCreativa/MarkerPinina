@@ -17,7 +17,8 @@ const SignedInLinks = () => (
         <i className="bx bx-log-out" />
       </NavLink>
       <NavLink to="/" className={classes.User}>
-        VS
+        <div className={classes.Circle}>VS</div>
+        <p>Virginia Velásquez</p>
       </NavLink>
     </ul>
   </>
