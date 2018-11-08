@@ -1,16 +1,18 @@
 import React from 'react';
-import classes from './SignedOutLinks.scss';
+import classes from './SignedInLinks.scss';
 import NavLink from '../NavItem/NavItem';
 
 const SignedInLinks = () => (
-  <div className={classes.SignedInLinks}>
-    <ul className="nav justify-content-end">
+  <>
+    <ul className={['nav', classes.SignedInLinks].join(' ')}>
       <NavLink toLink="/">Create Palabra</NavLink>
       <NavLink toLink="/">Create Significado</NavLink>
       <NavLink toLink="/">Log Out</NavLink>
-      <NavLink toLink="/">VV</NavLink>
+      <NavLink toLink="/" activeUser>
+        VV
+      </NavLink>
     </ul>
-  </div>
+  </>
 );
 
 export default SignedInLinks;
