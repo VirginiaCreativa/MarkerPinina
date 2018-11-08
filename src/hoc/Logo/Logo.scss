@@ -6,6 +6,9 @@
     .bx {
       color: $black;
       font-size: 32px;
+      &:hover {
+        color: $blue;
+      }
     }
   }
 }
