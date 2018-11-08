@@ -1,16 +1,11 @@
 .Logo {
-  h1 {
-    border-radius: 2px;
-    font-size: 20px;
-    border: 2px solid #2f3542;
-    display: inline-block;
-    margin-bottom: 0;
-    padding: 4px 6px;
-    color: #2f3542;
-    font-weight: 300;
-
-    span {
-      font-weight: 400;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  :global {
+    .bx {
+      color: $black;
+      font-size: 32px;
     }
   }
 }

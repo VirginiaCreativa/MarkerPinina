@@ -1,0 +1,47 @@
+.SignedInLinks {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  a {
+    margin: 0 8px;
+    text-transform: uppercase;
+    color: $gray_dark;
+  }
+} 
+.User {
+  background-color: $write_gray_3;
+  border-radius: 100px;
+  display: inline-block;
+  font-size: 12px;
+  height: 36px;
+  width: 36px;
+  text-align: center;
+  line-height: 3;
+}
+.btnCreate {
+  background-color: $gray_medium;
+  color: #fff !important;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  text-transform: uppercase;
+  box-shadow: 0px 12px 10px -10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: all ease-in-out 300ms;
+  &:hover {
+    box-shadow: 0px 16px 10px -10px rgba(0, 0, 0, 0.2);
+    background-color: $gray_dark;
+    transform: translate(0px, -2px) scale(1);
+    color: #fff;
+  }
+  
+  :global {
+    .bx {
+      color: #fff;
+      font-size: 16px;
+      margin-right: 4px;
+      position: relative;
+      top: 2px;
+    }
+  }
+}
