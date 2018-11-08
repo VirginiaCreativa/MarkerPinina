@@ -1,0 +1,32 @@
+.Navigations {
+  ul {
+    padding: 5px 0;
+
+    li {
+      margin: 0 10px;
+
+      a {
+        color: $black;
+        text-transform: uppercase;
+        font-weight: 400;
+        padding-bottom: 8px;
+        border-bottom: 2px solid $black;
+
+        &:hover {
+          color: $gray_medium;
+          border-bottom: 2px solid $gray_medium;
+        }
+      }
+    }
+  }
+}
+:global {
+  .nav-link {
+    padding: 0 !important;
+  }
+  .is-selected,
+  a.active {
+    border-bottom: 2px solid $gray_light !important;
+    color: $gray_light !important;
+  }
+}

@@ -4,7 +4,7 @@
   "description": "Boilerplate for react and webpack",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --open",
+    "start": "cross-env NODE_ENV=development webpack-dev-server",
     "build": "cross-env NODE_ENV=production webpack",
     "format": "prettier --write 'packages/**/*.js'",
     "test": "jest --watchAll --coverage",
@@ -54,7 +54,8 @@
     "prop-types": "15.6.2",
     "react": "16.6.0",
     "react-dom": "16.6.0",
-    "react-hot-loader": "4.3.11"
+    "react-hot-loader": "4.3.11",
+    "react-router-dom": "^4.3.1"
   },
   "resolutions": {
     "babel-core": "7.0.0-bridge.0"
@@ -110,14 +111,15 @@
     "koa-connect": "^2.0.1",
     "lint-staged": "7.3.0",
     "mini-css-extract-plugin": "0.4.4",
-    "node-sass": "4.9.4",
+    "node-sass": "^4.9.4",
     "prettier": "1.14.3",
     "pretty-quick": "1.8.0",
     "sass-loader": "7.1.0",
+    "sass-resources-loader": "^2.0.0",
     "style-loader": "0.23.1",
     "webpack": "4.23.1",
     "webpack-cli": "3.1.2",
-    "webpack-merge": "4.1.4",
-    "webpack-dev-server": "3.1.10"
+    "webpack-dev-server": "3.1.10",
+    "webpack-merge": "4.1.4"
   }
 }

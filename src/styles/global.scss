@@ -1,0 +1,62 @@
+body {
+  background-color: white;
+}
+p {
+  font-family: 'Rubik', sans-serif !important;
+  font-size: 14px;
+  line-height: 24px;
+  color: #444444;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+}
+p, h1, h2, h3, h4, h5, h6, a, span {
+  &::selection {
+    background-color: $black;
+    color: #fff;
+    @media (max-width: 575.98px) {
+      background-color: #fff;
+      color: $black;
+    }
+  }
+}
+a {
+  text-decoration: none !important;
+  font-family: 'Rubik', sans-serif !important;
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  a,
+  span {
+    color: $black;
+  }
+}
+button {
+  &:active,
+  &:focus {
+   outline: 0 !important;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Rubik', sans-serif !important; 
+}
+blockquote {
+  padding: 10px 20px;
+  background-color: $gray_light;
+  font-style: italic;
+  font-size: 13.5px;
+  p {
+    margin-bottom: 0;
+  }
+}
+section {
+  margin-bottom: 20px;
+}

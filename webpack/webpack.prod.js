@@ -24,7 +24,18 @@ module.exports = {
               localIdentName: '[local]___[hash:base64:5]',
             },
           },
-          'sass-loader',
+          {
+            loader: 'sass-loader',
+          },
+          {
+            loader: 'sass-resources-loader',
+            options: {
+              resources: [
+                './src/styles/variables.scss',
+                './src/styles/global.scss',
+              ],
+            },
+          },
         ],
       },
     ],
