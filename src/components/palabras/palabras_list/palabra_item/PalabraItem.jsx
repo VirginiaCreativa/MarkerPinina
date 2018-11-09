@@ -1,22 +1,24 @@
 import React from 'react';
 import classes from './PalabraItem.scss';
 
-const PalabraItem = () => (
+const PalabraItem = ({
+  title,
+  abrev,
+  contentPrim,
+  contentSecu,
+  phrasesPrim,
+  phrasesSecu,
+  date,
+}) => (
   <>
     <div className={classes.PalabraItem}>
-      <h4>Palabra Lista 1</h4>
-      <ul>
-        <li>
-          <span className="abrev">tr</span>
-          <p className="content">Envolver, enredar a alguien en algo:</p>
-          <p className="frase">Esa prueba le implicaba en el crimen. </p>
-        </li>
-        <li>
-          <span className="abrev">tr</span>
-          <p className="content">Contener, llevar en sí, significar:</p>
-          <p className="frase">Su respuesta implicaba reproche.</p>
-        </li>
-      </ul>
+      <h6>{title}</h6>
+      <p className="date">{date}</p>
+      <div className="abrev">{abrev}</div>
+      <p className="content">{contentPrim}</p>
+      <p className="frase">{phrasesPrim}</p>
+      <p className="content">{contentSecu}</p>
+      <p className="frase">{phrasesSecu}</p>
     </div>
   </>
 );

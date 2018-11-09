@@ -5,11 +5,7 @@ class PalabrasLists extends Component {
   state = {};
 
   render() {
-    return (
-      <>
-        <PalabraItem />
-      </>
-    );
+    return <PalabraItem />;
   }
 }
 export default PalabrasLists;
