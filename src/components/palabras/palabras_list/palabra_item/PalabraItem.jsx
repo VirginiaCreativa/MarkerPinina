@@ -1,6 +1,8 @@
 import React from 'react';
 import classes from './PalabraItem.scss';
 
+import { CURRENT_MESES } from '../../../../config/date';
+
 const PalabraItem = ({
   title,
   abrev,
@@ -12,7 +14,7 @@ const PalabraItem = ({
   <>
     <div className={classes.PalabraItem}>
       <h6>{title}</h6>
-      <p className="date">{date}</p>
+      <p className="date">{CURRENT_MESES || date}</p>
       <div className="abrev">{abrev}</div>
       <p className="content">{contentPrim}</p>
       <p className="frase">{phrasesPrim}</p>
