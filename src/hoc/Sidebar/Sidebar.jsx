@@ -4,6 +4,9 @@ import classes from './Sidebar.scss';
 
 const Sidebar = () => (
   <div className={classes.Sidebar}>
+    <NavLink to="/" exact activeClassName="selected" className="linkActive">
+      <i className="bx bx-dashboard" />
+    </NavLink>
     <NavLink to="/palabras" activeClassName="selected" className="linkActive">
       <i className="bx bx-font-color" />
     </NavLink>
