@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import classes from './PalabrasLists.scss';
 import PalabraItem from './palabra_item/PalabraItem';
 import Spinner from '../../common/spinner/Spinner';
 
@@ -12,7 +11,7 @@ class PalabrasLists extends Component {
 
   componentDidMount() {
     axios
-      .get('https://markerpinina.firebaseio.com/palabra')
+      .get('https://markerpinina.firebaseio.com/palabras.json')
       .then(response => {
         this.setState({
           palabras: response.data,
@@ -47,10 +46,8 @@ class PalabrasLists extends Component {
     }
     return (
       <>
-        <div className={classes.PalabrasLists}>
-          {loadingSpinner}
-          {palabrasLoad}
-        </div>
+        {loadingSpinner}
+        {palabrasLoad}
       </>
     );
   }
