@@ -13,17 +13,30 @@ const PalabraItem = ({
 }) => (
   <>
     <div className={classes.PalabraItem}>
-      <h6>{title}</h6>
-      <p className="date">{CURRENT_MESES || date}</p>
-      <div className="abrev">{abrev}</div>
-      <p className="content">{contentPrim}</p>
-      <p className="frase">{phrasesPrim}</p>
-
-      <ul>
-        {sinonimos.map(sinom => (
-          <li key={sinom}>{sinom}</li>
-        ))}
-      </ul>
+      <div className={classes.Grid}>
+        <i className="bx bx-font-color" />
+      </div>
+      <div className={classes.Grid}>
+        <h4>
+          {title}
+          <span className={classes.Abrev}>{abrev}</span>
+        </h4>
+        <p className={classes.Content}>{contentPrim}</p>
+        <p className={classes.Phrases}>
+          &ldquo;
+          {phrasesPrim}
+          &rdquo;
+        </p>
+        <ul className={classes.Sinonimos}>
+          {sinonimos.map(sinom => (
+            <li key={sinom}>{sinom}</li>
+          ))}
+        </ul>
+        <p className={classes.DateStyle}>
+          <i className="bx bx-calendar" />
+          {CURRENT_MESES || date}
+        </p>
+      </div>
     </div>
   </>
 );
