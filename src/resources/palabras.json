@@ -1,42 +1,44 @@
-[
-  {
-    "id": 1,
-    "title": "Implicar",
-    "abrev": "tr",
-    "contentPrim": "Envolver, enredar a alguien en algo",
-    "phrasesPrim": "Esa prueba le implicaba en el crimen.",
-    "contentSecu": "Contener, llevar en sí, significar.",
-    "phrasesSecu": "Su respuesta implicaba reproche",
-    "sinonimos": ["meter", "liar", "mezclar", "responsabilizar"]
-  },
-  {
-    "id": 2,
-    "title": "Concretar",
-    "abrev": "vb",
-    "contentPrim": "Hacer concreta o precisa alguna cosa",
-    "phrasesPrim": "Cuando vamos a hacer un examen, debemos concretarnos a estudiar lo más importante y no perder tiempo en lo superfluo.",
-    "contentSecu": "Reducir a lo más esencial",
-    "phrasesSecu": "Concretar una teoría.",
-    "sinonimos": ["precisar", "puntualizar", "aclarar", "definir"]
-  },
-  {
-    "id": 3,
-    "title": "Contemplar",
-    "abrev": "vb",
-    "contentPrim": "Mirar con atención o con gusto",
-    "phrasesPrim": "Sergio se pasó horas contemplando el paisaje",
-    "contentSecu": "Tener en cuenta algo o a alguien, considerar",
-    "phrasesSecu": "Contemplamos la posibilidad de cambiarnos de casa porque es muy pequeña en la que vivimos.",
-    "sinonimos": ["observar", "atender", "examinar", "mirar"]
-  },
-  {
-    "id": 4,
-    "title": "Distinguir",
-    "abrev": "tr",
-    "contentPrim": "Conocer la diferencia que hay de unas cosas a otras",
-    "phrasesPrim": "Sólo puedo distinguir a los gemelos por sus voces, uno la tiene más ronca que el otro",
-    "contentSecu": "Considerar separadamente, diferenciar por alguna particularidad",
-    "phrasesSecu": "Por el sabor no distingo bien el lenguado del gallo.",
-    "sinonimos": ["Diferenciar", "notar", "comprender", "analizar"]
-  }
-]
+{
+  "palabras" : [
+    {
+      "id": 1,
+      "title": "Implicar",
+      "abrev": "tr",
+      "contentPrim": "Envolver, enredar a alguien en algo",
+      "phrasesPrim": "Esa prueba le implicaba en el crimen.",
+      "contentSecu": "Contener, llevar en sí, significar.",
+      "phrasesSecu": "Su respuesta implicaba reproche",
+      "sinonimos": ["meter", "liar", "mezclar", "responsabilizar"]
+    },
+    {
+      "id": 2,
+      "title": "Concretar",
+      "abrev": "vb",
+      "contentPrim": "Hacer concreta o precisa alguna cosa",
+      "phrasesPrim": "Cuando vamos a hacer un examen, debemos concretarnos a estudiar lo más importante y no perder tiempo en lo superfluo.",
+      "contentSecu": "Reducir a lo más esencial",
+      "phrasesSecu": "Concretar una teoría.",
+      "sinonimos": ["precisar", "puntualizar", "aclarar", "definir"]
+    },
+    {
+      "id": 3,
+      "title": "Contemplar",
+      "abrev": "vb",
+      "contentPrim": "Mirar con atención o con gusto",
+      "phrasesPrim": "Sergio se pasó horas contemplando el paisaje",
+      "contentSecu": "Tener en cuenta algo o a alguien, considerar",
+      "phrasesSecu": "Contemplamos la posibilidad de cambiarnos de casa porque es muy pequeña en la que vivimos.",
+      "sinonimos": ["observar", "atender", "examinar", "mirar"]
+    },
+    {
+      "id": 4,
+      "title": "Distinguir",
+      "abrev": "tr",
+      "contentPrim": "Conocer la diferencia que hay de unas cosas a otras",
+      "phrasesPrim": "Sólo puedo distinguir a los gemelos por sus voces, uno la tiene más ronca que el otro",
+      "contentSecu": "Considerar separadamente, diferenciar por alguna particularidad",
+      "phrasesSecu": "Por el sabor no distingo bien el lenguado del gallo.",
+      "sinonimos": ["Diferenciar", "notar", "comprender", "analizar"]
+    }
+  ]
+}
