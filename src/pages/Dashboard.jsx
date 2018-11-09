@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import classes from './Pages.scss';
+import HeadingQuantity from '../components/common/heading_quantity/HeadingQuantity';
 import PalabrasLists from '../components/palabras/palabras_list/PalabrasList';
 import SignificadosLists from '../components/signficados/signficados_list/SignficadosList';
 
@@ -9,25 +9,17 @@ class Dashboard extends Component {
   render() {
     return (
       <>
-        <div className={classes.Dashboard}>
-          <div className="row">
-            <div className="col-5">
-              <h6>
-                Palabras <span className={classes.cantCard}>8</span>
-              </h6>
-              <PalabrasLists />
-            </div>
-            <div className="col-5">
-              <h6>
-                Siginificados <span className={classes.cantCard}>6</span>
-              </h6>
-              <SignificadosLists />
-            </div>
-            <div className="col-2">
-              <h6>
-                Notifications <span className={classes.cantCard}>14</span>
-              </h6>
-            </div>
+        <div className="row">
+          <div className="col-5">
+            <HeadingQuantity title="Palabra" quantited="8" />
+            <PalabrasLists />
+          </div>
+          <div className="col-5">
+            <HeadingQuantity title="Siginificados" quantited="6" />
+            <SignificadosLists />
+          </div>
+          <div className="col-2">
+            <HeadingQuantity title="Notificado" quantited="14" />
           </div>
         </div>
       </>
