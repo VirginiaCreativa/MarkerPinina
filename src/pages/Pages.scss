@@ -1,0 +1,16 @@
+.Dashboard {
+  h4 {
+    display: inline-block;
+  }
+  .cantCard {
+    font-size: 14px;
+    background-color: $blue_medium;
+    color: #fff;
+    border-radius: 100%;
+    height: 26px;
+    width: 26px;
+    display: inline-block;
+    text-align: center;
+    line-height: 1.9;
+  }
+}
