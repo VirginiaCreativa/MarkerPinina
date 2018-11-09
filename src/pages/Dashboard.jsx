@@ -5,9 +5,19 @@ class Dashboard extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Dashboard</h1>
-      </div>
+      <>
+        <div className="row">
+          <div className="col-4">
+            <h2>Palabras</h2>
+          </div>
+          <div className="col-4">
+            <h2>Significados</h2>
+          </div>
+          <div className="col-4">
+            <h2>Notificiación</h2>
+          </div>
+        </div>
+      </>
     );
   }
 }
