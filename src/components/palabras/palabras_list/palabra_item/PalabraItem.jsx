@@ -5,10 +5,9 @@ const PalabraItem = ({
   title,
   abrev,
   contentPrim,
-  contentSecu,
   phrasesPrim,
-  phrasesSecu,
   date,
+  sinonimos,
 }) => (
   <>
     <div className={classes.PalabraItem}>
@@ -17,8 +16,14 @@ const PalabraItem = ({
       <div className="abrev">{abrev}</div>
       <p className="content">{contentPrim}</p>
       <p className="frase">{phrasesPrim}</p>
-      <p className="content">{contentSecu}</p>
-      <p className="frase">{phrasesSecu}</p>
+
+      <ul>
+        {sinonimos.map(sinom => (
+          <li key={sinom}>
+            <li>{sinom}</li>
+          </li>
+        ))}
+      </ul>
     </div>
   </>
 );

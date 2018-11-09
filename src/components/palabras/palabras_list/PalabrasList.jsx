@@ -13,7 +13,6 @@ class PalabrasLists extends Component {
       .then(response => {
         this.setState({ palabras: response.data });
       })
-      // eslint-disable-next-line no-console
       .catch(error => console.log(error));
   }
 
