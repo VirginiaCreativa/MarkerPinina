@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import HeadingQuantity from '../components/common/heading_quantity/HeadingQuantity';
 import PalabrasLists from '../components/palabras/palabras_list/PalabrasList';
-import SignficadosGrid from '../components/signficados/signficados_grid/SignficadosGrid';
+import SignificadosGrid from '../components/significados/significados_grid/SignificadosGrid';
 
 class Dashboard extends Component {
   state = {};
@@ -20,7 +20,7 @@ class Dashboard extends Component {
               quantited="6"
               colored="#1fd1a1"
             />
-            <SignficadosGrid />
+            <SignificadosGrid />
           </div>
           <div className="col-2">
             <HeadingQuantity

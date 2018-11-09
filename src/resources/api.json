@@ -1,0 +1,101 @@
+{
+  "palabras" : [
+    {
+      "id": 1,
+      "title": "Implicar",
+      "abrev": "tr",
+      "contentPrim": "Envolver, enredar a alguien en algo",
+      "phrasesPrim": "Esa prueba le implicaba en el crimen.",
+      "contentSecu": "Contener, llevar en sí, significar.",
+      "phrasesSecu": "Su respuesta implicaba reproche",
+      "sinonimos": ["meter", "liar", "mezclar", "responsabilizar"]
+    },
+    {
+      "id": 2,
+      "title": "Concretar",
+      "abrev": "vb",
+      "contentPrim": "Hacer concreta o precisa alguna cosa",
+      "phrasesPrim": "Cuando vamos a hacer un examen, debemos concretarnos a estudiar lo más importante y no perder tiempo en lo superfluo.",
+      "contentSecu": "Reducir a lo más esencial",
+      "phrasesSecu": "Concretar una teoría.",
+      "sinonimos": ["precisar", "puntualizar", "aclarar", "definir"]
+    },
+    {
+      "id": 3,
+      "title": "Contemplar",
+      "abrev": "vb",
+      "contentPrim": "Mirar con atención o con gusto",
+      "phrasesPrim": "Sergio se pasó horas contemplando el paisaje",
+      "contentSecu": "Tener en cuenta algo o a alguien, considerar",
+      "phrasesSecu": "Contemplamos la posibilidad de cambiarnos de casa porque es muy pequeña en la que vivimos.",
+      "sinonimos": ["observar", "atender", "examinar", "mirar"]
+    },
+    {
+      "id": 4,
+      "title": "Distinguir",
+      "abrev": "tr",
+      "contentPrim": "Conocer la diferencia que hay de unas cosas a otras",
+      "phrasesPrim": "Sólo puedo distinguir a los gemelos por sus voces, uno la tiene más ronca que el otro",
+      "contentSecu": "Considerar separadamente, diferenciar por alguna particularidad",
+      "phrasesSecu": "Por el sabor no distingo bien el lenguado del gallo.",
+      "sinonimos": ["Diferenciar", "notar", "comprender", "analizar"]
+    }
+  ],
+  "significados": [{
+      "id": 1,
+      "title": "Implicar",
+      "images": [
+        "assets/images/implicar1.gif",
+        "assets/images/implicar2.gif",
+        "http://www.fce.unan.edu.ni/wp-content/uploads/2016/04/fortalecimiento.jpg",
+        "https://involve.mywebsite.solutions//wp-content/uploads/sites/108/2017/01/training-involve.jpg"
+      ],
+      "contentPrim": "Comprometer o involucrar a alguien en un asunto.",
+      "phrasesPrim": "las declaraciones de varios perjudicados por este escándalo financiero implicaban al empresario; está utilizando todos los medios para implicar en la conspiración a aquellos que se oponen a su política",
+      "contentSecu": "Hacer participar a alguien en una cosa.",
+      "phrasesSecu": "el presidente está dispuesto a implicar a sus mejores expertos en la reforma económica del país; su narración es digresiva y la acción implica a un muy amplio elenco de personajes"
+    },
+    {
+      "id": 2,
+      "title": "Intervenir",
+      "images": [
+        "assets/images/intervenir1.gif",
+        "assets/images/intervenir2.gif",
+        "http://www.fce.unan.edu.ni/wp-content/uploads/2016/04/fortalecimiento.jpg",
+        "https://involve.mywebsite.solutions//wp-content/uploads/sites/108/2017/01/training-involve.jpg"
+      ],
+      "contentPrim": "Participar o actuar en un suceso, un acto o una actividad, especialmente en una parte de ellos o de forma entrometida.",
+      "phrasesPrim": "solamente intervino en la conversación para apuntar un detalle; en este capítulo han intervenido los artistas invitados…; en la reforma de la mezquita intervinieron artistas de varias religiones; permitieron que las tropas interviniesen en el conflicto sin avisar",
+      "contentSecu": "Actuar de mediador en un conflicto o en un asunto ajeno",
+      "phrasesSecu": "tuve que intervenir para que la discusión no llegase a las manos"
+    },
+    {
+      "id": 3,
+      "title": "Redux",
+      "images": [
+        "https://cdn-images-1.medium.com/max/1200/0*U2DmhXYumRyXH6X1.png",
+        "https://jo-media.objects-us-west-1.dream.io/wp-content/uploads/2017/02/redux-overview.png",
+        "assets/images/redux1.gif",
+        "assets/images/redux2.gif"
+      ],
+      "contentPrim": "Redux se encarga en cierta manera de desacoplar el estado global de una aplicación web (en Front-End) de la parte visual, es decir los componentes.",
+      "phrasesPrim": "El estado en una web o aplicación pueden ser varias cosas, normalmente se trata los datos que puedes recibir a través de un API REST o WebService(por ejemplo un listado de productos), también se refiere al estado de la UI en un determinado momento, por ejemplo: un panel está desplegado o no, tiene que aparecer la información del usuario o no, un mensaje de error, etc...",
+      "contentSecu": null,
+      "phrasesSecu": null
+    },
+    {
+      "id": 4,
+      "title": "Estructura",
+      "images": [
+        "assets/images/estructura1.gif",
+        "assets/images/estructura2.gif",
+        "data:image/png;base64,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",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYJAL17XO2IYwa57MrH3wum-kkmjqz_Y-eCXbbhewRjLeQxISnMQ"
+      ],
+      "contentPrim": "Conjunto de relaciones que mantienen entre sí las partes de un todo.",
+      "phrasesPrim": "estructura del cuerpo humano; estructura de un poema; esto obedece a una formidable estructura de intereses económicos",
+      "contentSecu": "Modo de estar organizadas u ordenadas las partes de un todo.",
+      "phrasesSecu": "estructura de red; debe integrarse en la estructura de federación de los estados-regiones de la zona"
+    }
+  ]
+}
