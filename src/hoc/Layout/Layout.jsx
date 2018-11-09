@@ -8,7 +8,9 @@ const layout = ({ children }) => (
     <div className={classes.layout}>
       <Header />
       <Sidebar />
-      <div className="container">{children}</div>
+      <div className={classes.Wrapper}>
+        <div className="container">{children}</div>
+      </div>
     </div>
   </>
 );
