@@ -19,9 +19,7 @@ const PalabraItem = ({
 
       <ul>
         {sinonimos.map(sinom => (
-          <li key={sinom}>
-            <li>{sinom}</li>
-          </li>
+          <li key={sinom}>{sinom}</li>
         ))}
       </ul>
     </div>
