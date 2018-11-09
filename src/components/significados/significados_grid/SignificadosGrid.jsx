@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import SignificadoItem from './significado_item/SignificadoItem';
 
 class SignficadosGrid extends Component {
   state = {};
 
   render() {
-    return <h2>Grid Signficados</h2>;
+    return <SignificadoItem />;
   }
 }
 export default SignficadosGrid;

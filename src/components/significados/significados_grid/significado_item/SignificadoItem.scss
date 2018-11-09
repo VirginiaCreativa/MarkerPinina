@@ -1,0 +1,29 @@
+.SignificadoItem {
+  background-color: #fff;
+  border-left: 3px solid #1fd1a1;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+  h4 {
+    display: block;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  .DateStyle {
+    font-size: 11px;
+    color: $gray_light;
+  }
+  :global {
+    .bx-calendar {
+      margin-right: 6px;
+    }
+    .bx-pin {
+      font-size: 32px;
+      color: $write_gray_3;
+    }
+  }
+  .Wrapper {
+    padding: 10px 20px;
+  }
+}
