@@ -27,3 +27,31 @@
     padding: 10px 20px;
   }
 }
+:global {
+  .slider-frame {
+    height: 400px !important;
+    overflow: hidden;
+    background-position: center center;
+  }
+  .slider-control-centerleft {
+    display: none !important;
+  }
+  .slider-control-centerright {
+    display: none !important;
+  }
+  .slider-control-bottomcenter {
+    bottom: -22px !important;
+  }
+  .slider-list {
+    li {
+      &:nth-child(1),
+      &:nth-child(2) {
+        img {
+          position: relative;
+          top: -200px;
+
+        }
+      }
+    }
+  }
+}

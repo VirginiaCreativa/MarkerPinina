@@ -1,17 +1,17 @@
 import React from 'react';
+import Carousel from 'nuka-carousel';
 import classes from './SignificadoItem.scss';
-
 import { CURRENT_MESES } from '../../../../config/date';
 
-const SignificadoItem = ({ title, date }) => (
+const SignificadoItem = ({ title, date, images }) => (
   <>
     <div className={classes.SignificadoItem}>
       <div className={classes.Slider}>
-        <img
-          src="http://www.fce.unan.edu.ni/wp-content/uploads/2016/04/fortalecimiento.jpg"
-          alt={title}
-          className="img-fluid"
-        />
+        <Carousel>
+          {images.map(image => (
+            <img key={image} className="img-fluid" alt={title} src={image} />
+          ))}
+        </Carousel>
       </div>
       <div className={classes.Wrapper}>
         <h4>{title || `Implicar`}</h4>

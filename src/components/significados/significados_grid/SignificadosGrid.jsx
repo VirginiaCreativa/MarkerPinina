@@ -33,6 +33,7 @@ class SignficadosGrid extends Component {
     if (loading) {
       loadingSpinner = <Spinner />;
     }
+
     if (significados) {
       significadosLoad = (
         <>

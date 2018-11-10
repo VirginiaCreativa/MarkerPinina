@@ -27,9 +27,7 @@ class PalabrasLists extends Component {
   render() {
     const { palabras, loading } = this.state;
 
-    // eslint-disable-next-line no-unused-vars
     let palabrasLoad = <Spinner />;
-    // eslint-disable-next-line no-unused-vars
     let loadingSpinner = null;
 
     if (loading) {
