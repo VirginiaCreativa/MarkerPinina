@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, withRouter } from 'react-router-dom';
+import { NavLink, Link, withRouter } from 'react-router-dom';
 import classes from './SignedInLinks.scss';
 
 const SignedInLinks = () => (
@@ -7,11 +7,32 @@ const SignedInLinks = () => (
     <ul className={['nav', classes.SignedInLinks].join(' ')}>
       <NavLink to="/" className={classes.btnCreate}>
         <i className="bx bx-plus" />
-        Create Palabra
+        <div className={classes.Menus}>
+          <div className={classes.Triangule} />
+          <ul>
+            <li>
+              <Link to="/palabras">
+                <i className="bx bx-pin" />
+                Palabra
+              </Link>
+            </li>
+            <li>
+              <Link to="/enseñanza">
+                <i className="bx bx-documentation" />
+                Enseñanza
+              </Link>
+            </li>
+            <li>
+              <Link to="/proyecto">
+                <i className="bx bx-idea" />
+                Proyecto
+              </Link>
+            </li>
+          </ul>
+        </div>
       </NavLink>
-      <NavLink to="/" className={classes.btnCreate}>
-        <i className="bx bx-plus" />
-        Create Grámatica
+      <NavLink to="/" className={classes.Notification}>
+        <i className="bx bx-notification" />
       </NavLink>
       <NavLink to="/">
         <i className="bx bx-log-out" />

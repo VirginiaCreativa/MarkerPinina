@@ -8,6 +8,9 @@ const SignedOutLinks = () => (
       <NavLink toLink="/">
         <i className="bx bx-log-in" />
       </NavLink>
+      <NavLink toLink="/" className={classes.Notification}>
+        <i className="bx bx-lnotification" />
+      </NavLink>
       <NavLink toLink="/">
         <i className="bx bx-user-circle" />
       </NavLink>
