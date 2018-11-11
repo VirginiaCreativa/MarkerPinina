@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import Layout from './hoc/Layout/Layout';
 import Dashboard from './pages/Dashboard';
 import Palabras from './pages/Palabras';
-import Significados from './pages/Significados';
+import Gramatica from './pages/Gramaticas';
 
 class App extends Component {
   state = {};
@@ -15,7 +15,7 @@ class App extends Component {
         <Layout>
           <Switch>
             <Route path="/" exact component={Dashboard} />
-            <Route path="/significados" component={Significados} />
+            <Route path="/gramatica" component={Gramatica} />
             <Route path="/palabras" component={Palabras} />
             <Route path="/dashboard" component={Dashboard} />
           </Switch>

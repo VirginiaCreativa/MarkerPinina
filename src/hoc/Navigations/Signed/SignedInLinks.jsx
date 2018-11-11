@@ -11,7 +11,7 @@ const SignedInLinks = () => (
       </NavLink>
       <NavLink to="/" className={classes.btnCreate}>
         <i className="bx bx-plus" />
-        Create Significado
+        Create Grámatica
       </NavLink>
       <NavLink to="/">
         <i className="bx bx-log-out" />
