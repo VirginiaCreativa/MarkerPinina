@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
 import { Route, Switch } from 'react-router-dom';
 import Layout from './hoc/Layout/Layout';
-import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/Dashboard/Dashboard';
 import Palabras from './pages/Palabras';
 import Notebook from './pages/Notebook';
 import Proyectos from './pages/Proyectos';
