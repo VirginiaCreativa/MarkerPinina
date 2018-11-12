@@ -15,17 +15,13 @@ class Dashboard extends Component {
             <PalabrasLists />
           </div>
           <div className="col-5">
-            <HeadingQuantity
-              title="Grámaticas"
-              quantited="6"
-              colored="#1fd1a1"
-            />
+            <HeadingQuantity title="Notebook" quantited="6" colored="#1fd1a1" />
             <GramaticasGrid />
           </div>
           <div className="col-2">
             <HeadingQuantity
-              title="Notificado"
-              quantited="14"
+              title="Proyectos"
+              quantited="3"
               colored="#3a3b98"
             />
           </div>

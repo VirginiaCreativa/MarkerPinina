@@ -6,7 +6,7 @@ class Gramaticas extends Component {
   render() {
     return (
       <div>
-        <h1>Gramaticas</h1>
+        <h1>Notebook</h1>
       </div>
     );
   }

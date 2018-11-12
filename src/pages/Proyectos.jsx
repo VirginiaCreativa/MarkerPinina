@@ -6,7 +6,7 @@ class Notifications extends Component {
   render() {
     return (
       <div>
-        <h1>Notifications</h1>
+        <h1>Proyectos</h1>
       </div>
     );
   }

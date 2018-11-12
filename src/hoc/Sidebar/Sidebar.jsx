@@ -10,8 +10,11 @@ const Sidebar = () => (
     <NavLink to="/palabras" activeClassName="selected" className="linkActive">
       <i className="bx bx-pin" />
     </NavLink>
-    <NavLink to="/gramatica" activeClassName="selected" className="linkActive">
+    <NavLink to="/notebook" activeClassName="selected" className="linkActive">
       <i className="bx bx-book-bookmark" />
+    </NavLink>
+    <NavLink to="/proyectos" activeClassName="selected" className="linkActive">
+      <i className="bx bx-idea" />
     </NavLink>
   </div>
 );

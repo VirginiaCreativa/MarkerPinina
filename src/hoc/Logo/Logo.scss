@@ -2,13 +2,7 @@
   display: flex;
   align-items: center;
   height: 36px;
-  :global {
-    .bx {
-      color: $black;
-      font-size: 32px;
-      &:hover {
-        color: $blue;
-      }
-    }
+  img {
+    height: 40px;
   }
 }
