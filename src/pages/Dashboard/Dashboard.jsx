@@ -5,9 +5,20 @@ import PalabrasLists from '../../components/palabras/palabras_list/PalabrasList'
 import GramaticasGrid from '../../components/gramaticas/gramaticas_grid/GramaticasGrid';
 
 class Dashboard extends Component {
-  state = {};
+  state = {
+    switcher: true,
+  };
+
+  handleSwitcherList = () => {
+    this.setState({ switcher: true });
+  };
+
+  handleSwitcherGrid = () => {
+    this.setState({ switcher: false });
+  };
 
   render() {
+    const { switcher } = this.state;
     return (
       <>
         <div className="row">
@@ -22,16 +33,16 @@ class Dashboard extends Component {
               </div>
               <div className="col">
                 <div className={classes.Switcher}>
-                  <button onClick={this.handleSwitcher} type="button">
+                  <button onClick={this.handleSwitcherGrid} type="button">
                     <i className="bx bx-grid-alt" />
                   </button>
-                  <button onClick={this.handleSwitcher} type="button">
+                  <button onClick={this.handleSwitcherList} type="button">
                     <i className="bx bx-list-alt" />
                   </button>
                 </div>
               </div>
             </div>
-            <PalabrasLists />
+            {switcher ? <PalabrasLists /> : 'Grid'}
           </div>
           <div className="col-5">
             <HeadingQuantity title="Notebook" quantited="6" colored="#1fd1a1" />

@@ -43,16 +43,23 @@
 }
 .btnCreate {
   position: relative;
+  border: none;
   background-color: $blue;
   color: #fff !important;
   border-radius: 100px;
   display: block;
-  width: 36px;
-  height: 36px;
-  font-size: 13px;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
+  line-height: 1;
   transition: all ease-in-out 300ms;
   box-shadow: 0px 12px 10px -10px rgba(0, 0, 0, 0.2);
+  :global {
+    .bx-plus {
+      font-size: 20px !important;
+      transform: translate(-2px, 0);
+    }
+  }
   &:hover {
     box-shadow: 0px 16px 10px -10px rgba(0, 0, 0, 0.2);
     background-color: $blue_medium;
@@ -66,6 +73,7 @@
     position: absolute;
     opacity: 0;
     top: 0;
+    left: -67px;
     transform: translate(0px, -22px);
     background-color: #fff;
     border-radius: 4px;

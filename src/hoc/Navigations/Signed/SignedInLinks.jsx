@@ -5,7 +5,7 @@ import classes from './SignedInLinks.scss';
 const SignedInLinks = () => (
   <>
     <ul className={['nav', classes.SignedInLinks].join(' ')}>
-      <NavLink to="/" className={classes.btnCreate}>
+      <button className={classes.btnCreate} type="button">
         <i className="bx bx-plus" />
         <div className={classes.Menus}>
           <div className={classes.Triangule} />
@@ -30,7 +30,7 @@ const SignedInLinks = () => (
             </li>
           </ul>
         </div>
-      </NavLink>
+      </button>
       <NavLink to="/" className={classes.Notification}>
         <i className="bx bx-notification" />
       </NavLink>
