@@ -18,8 +18,8 @@ const SignedInLinks = () => (
             </li>
             <li>
               <Link to="/enseñanza">
-                <i className="bx bx-documentation" />
-                Enseñanza
+                <i className="bx bx-book-bookmark" />
+                Notebook
               </Link>
             </li>
             <li>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classes from './Dashboard.scss';
 import HeadingQuantity from '../../components/common/heading_quantity/HeadingQuantity';
 import PalabrasLists from '../../components/palabras/palabras_list/PalabrasList';
-import GramaticasGrid from '../../components/gramaticas/gramaticas_grid/GramaticasGrid';
+import PalabrasGrid from '../../components/palabras/palabras_grid/PalabrasGrid';
 
 class Dashboard extends Component {
   state = {
@@ -19,6 +19,7 @@ class Dashboard extends Component {
 
   render() {
     const { switcher } = this.state;
+
     return (
       <>
         <div className="row">
@@ -33,20 +34,19 @@ class Dashboard extends Component {
               </div>
               <div className="col">
                 <div className={classes.Switcher}>
-                  <button onClick={this.handleSwitcherGrid} type="button">
-                    <i className="bx bx-grid-alt" />
-                  </button>
                   <button onClick={this.handleSwitcherList} type="button">
                     <i className="bx bx-list-alt" />
+                  </button>
+                  <button onClick={this.handleSwitcherGrid} type="button">
+                    <i className="bx bx-grid-alt" />
                   </button>
                 </div>
               </div>
             </div>
-            {switcher ? <PalabrasLists /> : 'Grid'}
+            <div>{switcher ? <PalabrasLists /> : <PalabrasGrid />}</div>
           </div>
           <div className="col-5">
             <HeadingQuantity title="Notebook" quantited="6" colored="#1fd1a1" />
-            <GramaticasGrid />
           </div>
           <div className="col-2">
             <HeadingQuantity
