@@ -6,7 +6,7 @@ import PalabrasGrid from '../../components/palabras/palabras_grid/PalabrasGrid';
 
 class Dashboard extends Component {
   state = {
-    switcher: true,
+    switcher: false,
   };
 
   handleSwitcherList = () => {

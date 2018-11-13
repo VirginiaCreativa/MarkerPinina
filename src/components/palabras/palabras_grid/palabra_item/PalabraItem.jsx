@@ -1,11 +1,18 @@
+/* eslint-disable jsx-a11y/mouse-events-have-key-events */
 import React from 'react';
+import GifPlayer from 'react-gif-player';
 import classes from './PalabraItem.scss';
 
-const PalabraItem = ({ title, contentPrim, lsc }) => (
+const PalabraItem = ({ title, contentPrim, lsc, lscImage }) => (
   <>
     <div className={classes.PalabraItem}>
       <div className={classes.View}>
-        <img src={lsc} alt="" className="img-fluid" />
+        <GifPlayer
+          gif={lsc}
+          still={lscImage}
+          alt={title}
+          className="img-fluid"
+        />
       </div>
       <div className={classes.Grid}>
         <div>
