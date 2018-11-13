@@ -1,20 +1,11 @@
 import React from 'react';
 import classes from './PalabraItem.scss';
 
-import { CURRENT_MESES } from '../../../../config/date';
-
-const PalabraItem = ({
-  title,
-  abrev,
-  contentPrim,
-  phrasesPrim,
-  date,
-  sinonimos,
-}) => (
+const PalabraItem = ({ title, abrev, contentPrim, phrasesPrim, sinonimos }) => (
   <>
     <div className={classes.PalabraItem}>
       <div className={classes.Grid}>
-        <i className="bx bx-font-color" />
+        <i className="bx bx-pin" />
       </div>
       <div className={classes.Grid}>
         <h4>
@@ -32,10 +23,6 @@ const PalabraItem = ({
             <li key={sinom}>{sinom}</li>
           ))}
         </ul>
-        <p className={classes.DateStyle}>
-          <i className="bx bx-calendar" />
-          {CURRENT_MESES || date}
-        </p>
       </div>
     </div>
   </>

@@ -14,13 +14,13 @@
   }
   .Grid {
     display: grid;
-    grid-template-columns: 40px auto;
+    grid-template-columns: 26px auto;
     grid-gap: 10px;
     padding: 10px;
   }
   :global {
-    .bx-font-color {
-      font-size: 32px;
+    .bx-pin {
+      font-size: 28px;
       color: $write_gray_3;
     }
   }
@@ -29,6 +29,7 @@
     line-height: 1.5;
     h4 {
       display: block;
+      margin-bottom: 0;
     }
     p {
       margin-bottom: 0;

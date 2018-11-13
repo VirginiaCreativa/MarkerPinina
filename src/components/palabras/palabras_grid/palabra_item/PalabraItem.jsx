@@ -9,7 +9,7 @@ const PalabraItem = ({ title, contentPrim, lsc }) => (
       </div>
       <div className={classes.Grid}>
         <div>
-          <i className="bx bx-font-color" />
+          <i className="bx bx-pin" />
         </div>
         <div className={classes.Content}>
           <h4>{title}</h4>
