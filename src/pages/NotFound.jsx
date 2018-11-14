@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const urlFound = require('../assets/images/error.gif');
 
-class PalabrasLists extends Component {
+class NotFound extends Component {
   state = {};
 
   render() {
@@ -15,4 +15,4 @@ class PalabrasLists extends Component {
     );
   }
 }
-export default PalabrasLists;
+export default NotFound;

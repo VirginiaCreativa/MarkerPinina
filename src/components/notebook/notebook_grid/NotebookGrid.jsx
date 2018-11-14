@@ -11,7 +11,7 @@ class NotebookGrid extends Component {
 
   componentDidMount() {
     axios
-      .get('https://markerpinina.firebaseio.com/notebook.json')
+      .get('/notebook')
       .then(response => {
         this.setState({
           notebooks: response.data,

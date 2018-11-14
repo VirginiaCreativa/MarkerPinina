@@ -11,7 +11,7 @@ class PalabrasLists extends Component {
 
   componentDidMount() {
     axios
-      .get('https://markerpinina.firebaseio.com/palabras.json')
+      .get('/palabras')
       .then(response => {
         this.setState({
           palabras: response.data,
