@@ -1,5 +1,7 @@
+/* eslint-disable jsx-a11y/media-has-caption */
 import React, { Component } from 'react';
 import VideoPlayerLayout from './layout/VideoPlayerLayout';
+import Video from './video/Video';
 
 class VideoPlayer extends Component {
   state = {};
@@ -7,7 +9,7 @@ class VideoPlayer extends Component {
   render() {
     return (
       <VideoPlayerLayout>
-        <h2>gjdslkf</h2>
+        <Video />
       </VideoPlayerLayout>
     );
   }

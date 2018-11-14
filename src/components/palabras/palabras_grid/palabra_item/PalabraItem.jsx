@@ -5,7 +5,7 @@ import classes from './PalabraItem.scss';
 import VideoPlayer from '../../../common/videoplayer/VideoPlayer';
 
 // const PalabraItem = ({ title, contentPrim, lsc, lscImage, abrev }) => (
-const PalabraItem = ({ title, contentPrim, abrev }) => (
+const PalabraItem = ({ title, contentPrim, abrev, video }) => (
   <>
     <div className={classes.PalabraItem}>
       <div className={classes.View}>
@@ -15,7 +15,7 @@ const PalabraItem = ({ title, contentPrim, abrev }) => (
           alt={title}
           className="img-fluid"
         /> */}
-        <VideoPlayer />
+        <VideoPlayer srcVideo={video} />
       </div>
       <div className={classes.Grid}>
         <div>
