@@ -12,7 +12,7 @@ class VideoPlayer extends Component {
     loading: true,
   };
 
-  componentDidMount() {
+  componentWillMount() {
     axios
       .get('/palabras')
       .then(response => {
