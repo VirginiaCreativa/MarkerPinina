@@ -59,16 +59,20 @@ module.exports = {
       app.use(convert(history()));
     },
     content: commonPaths.entryPath,
-    dev: {
+    devServer: {
       publicPath: commonPaths.outputPath,
+      contentBase: commonPaths.entryPath,
+      watchContentBase: true,
+      compress: true,
     },
-    open: true,
   },
   resolve: {
     modules: ['src', 'node_modules'],
     extensions: ['*', '.js', '.jsx', '.css', '.scss'],
   },
   plugins: [
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.ProgressPlugin(),
     new HtmlWebpackPlugin({
       template: commonPaths.templatePath,

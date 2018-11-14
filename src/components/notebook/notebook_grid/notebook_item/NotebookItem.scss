@@ -26,6 +26,21 @@
     color: $gray_light;
     font-weight: 300;
   }
+  .Categoria {
+    display: flex;
+    justify-content: flex-end;
+    p {
+      display: block;
+      background-color: #e3f6fa;
+      color: $blue;
+      padding: 0 6px;
+      border-radius: 2px;
+      font-weight: 700;
+      font-size: 12px;
+      margin-bottom: 0 !important;
+    }
+    
+  }
   :global {
     .bx-calendar {
       margin-right: 6px;

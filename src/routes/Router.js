@@ -8,17 +8,16 @@ class Router extends Component {
   state = {};
 
   render() {
-    console.log(this.props);
     return (
       <div>
         <Switch>
-          <Route path="/" exact component={Dashboard} />
-          <Redirect from="/*" to="/notfound" />
           <Route path="/notebook" component={Notebook} />
           <Route path="/proyectos" component={Proyectos} />
           <Route path="/palabras" component={Palabras} />
-          <Route component={NotFound} />
           <Route path="/dashboard" component={Dashboard} />
+          <Route path="/" exact component={Dashboard} />
+          <Route path="/*" component={NotFound} />
+          <Redirect from="/*" to="/notfound" />
         </Switch>
       </div>
     );

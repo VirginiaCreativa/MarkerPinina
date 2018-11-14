@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './NotebookItem.scss';
 import { CURRENT_MESES } from '../../../../config/date';
 
-const NotebookItem = ({ title, content, date, images }) => {
+const NotebookItem = ({ title, content, date, images, categorias }) => {
   const shortContent = content.slice(0, 100) + '...';
   return (
     <>
@@ -14,10 +14,19 @@ const NotebookItem = ({ title, content, date, images }) => {
           <h4>{title}</h4>
           <p>{shortContent}</p>
           <hr />
-          <p className={classes.DateStyle}>
-            <i className="bx bx-calendar" />
-            {CURRENT_MESES || date}
-          </p>
+          <div className="row">
+            <div className="col">
+              <p className={classes.DateStyle}>
+                <i className="bx bx-calendar" />
+                {CURRENT_MESES || date}
+              </p>
+            </div>
+            <div className="col">
+              <div className={classes.Categoria}>
+                <p>{categorias}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

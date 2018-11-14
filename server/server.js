@@ -1,12 +1,13 @@
-/* eslint-disable no-path-concat */
 const express = require('express');
+const path = require('path');
 
 const app = express();
 const router = express.Router();
-const webpack = require('webpack');
-const middleware = require('webpack-dev-middleware');
-const hotmiddleware = require('webpack-hot-middleware');
-const webpackConfig = require('../webpack.config.js');
+const bodyParser = require('body-parser');
+// const webpack = require('webpack');
+// const middleware = require('webpack-dev-middleware');
+// const hotmiddleware = require('webpack-hot-middleware');
+// const webpackConfig = require('../webpack.config.js');
 
 const logger = require('./logger.js');
 const home = require('./routes/home.js');
@@ -15,38 +16,38 @@ const palabras = require('./routes/palabras.js');
 const proyectos = require('./routes/proyectos.js');
 const notebook = require('./routes/notebook.js');
 
-const compiler = webpack(webpackConfig);
-
 app.use(logger);
 
-app.use(express.static(__dirname + '/dist'));
-app.use(express.json());
+app.use(express.static(path.resolve(__dirname, 'dist')));
+app.use(bodyParser.json());
 
-app.use(
-  hotmiddleware(compiler, {
-    log: console.log,
-    path: '/__webpack_hmr',
-    heartbeat: 10 * 1000,
-  }),
-);
+// const compiler = webpack(webpackConfig);
 
-app.use(
-  middleware(compiler, {
-    noInfo: true,
-    publicPath: webpackConfig.dev,
-  }),
-);
+// app.use(
+//   hotmiddleware(compiler, {
+//     log: false,
+//     reload: true,
+//   }),
+// );
+
+// app.use(
+//   middleware(compiler, {
+//     noInfo: true,
+//     publicPath: webpackConfig.dev,
+//     watchOptions: true,
+//   }),
+// );
 
 // ROUTER
 app.use('/', home);
-app.use('/palabras', palabras);
 app.use('/dashboard', dashboard);
-app.use('/notebook', notebook);
+app.use('/palabras', palabras);
 app.use('/proyectos', proyectos);
+app.use('/notebook', notebook);
 
 app.use('/', router);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
-  console.log('Listening 3000');
+  console.log('Listening 8080');
 });
