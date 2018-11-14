@@ -13,21 +13,21 @@
     "id" : 2,
     "tag" : [ "reactjs", "avanzado", "redux", "javascript" ],
     "title" : "Redux Avanzado",
-    "images": "https://www.gitbook.com/share/space/thumbnail/-L5K1I1WsuQMZ8ecEuWg.png"
+    "images": "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/notebook%2FADVANCED%20PATTERS.jpg?alt=media&token=173a4489-b717-44d2-bb32-784046ec5717"
   }, {
     "categorias" : "React",
     "content" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     "id" : 3,
     "tag" : [ "reactjs", "avanzado", "demo", "javascript" ],
     "title" : "React Switcher",
-    "images": "https://www.gitbook.com/share/space/thumbnail/-L5K1I1WsuQMZ8ecEuWg.png"
+    "images": "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/notebook%2FSWITcHER%20GRID%252FLIST.jpg?alt=media&token=2ebafb17-a0fa-4628-8bd6-b3eaf956e673"
   }, {
     "categorias" : "Grámatica",
     "content" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     "id" : 4,
     "tag" : [ "español", "gramatica", "frases", "ejemplos" ],
     "title" : "Determinantes",
-    "images": "https://www.gitbook.com/share/space/thumbnail/-L5K1I1WsuQMZ8ecEuWg.png"
+    "images": "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/notebook%2FArticulo_Un_El_.jpg?alt=media&token=5a4b77f4-566d-40e3-a20a-d88390d4157c"
   } 
 ],
   "palabras" : [ 
