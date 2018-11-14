@@ -1,14 +1,16 @@
 body {
   background-color: #dfe4ea;
-  font-family: 'Roboto', sans-serif !important;
+  font-family: 'Comfortaa', sans-serif !important;
   margin-top: 70px;
   padding: 40px 0 0;
 }
 p {
+  font-family: 'Comfortaa', sans-serif !important;
   font-size: 14px;
   line-height: 24px;
   color: #444444;
   word-spacing: 2px;
+  font-weight: 300;
 }
 p, h1, h2, h3, h4, h5, h6, a, span {
   &::selection {
@@ -33,6 +35,14 @@ a {
   span {
     color: $black;
   }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, {
+  font-weight: 700 !important;
 }
 button {
   &:active,
@@ -71,7 +81,6 @@ section {
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.5);
     color: #fff;
     cursor: pointer;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 24px;
     left: 50%;
     opacity: 1;

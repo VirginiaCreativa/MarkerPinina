@@ -3,6 +3,7 @@ import classes from './Dashboard.scss';
 import HeadingQuantity from '../../components/common/heading_quantity/HeadingQuantity';
 import PalabrasLists from '../../components/palabras/palabras_list/PalabrasList';
 import PalabrasGrid from '../../components/palabras/palabras_grid/PalabrasGrid';
+import NotebookGrid from '../../components/notebook/notebook_grid/NotebookGrid';
 
 class Dashboard extends Component {
   state = {
@@ -47,6 +48,7 @@ class Dashboard extends Component {
           </div>
           <div className="col-5">
             <HeadingQuantity title="Notebook" quantited="6" colored="#1fd1a1" />
+            <NotebookGrid />
           </div>
           <div className="col-2">
             <HeadingQuantity

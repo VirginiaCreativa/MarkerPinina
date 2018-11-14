@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import GramaticaItem from './gramatica_item/GramaticaItem';
+import NotebookItem from './notebook_item/NotebookItem';
 import Spinner from '../../common/spinner/Spinner';
 
-class GramaticaGrid extends Component {
+class NotebookGrid extends Component {
   state = {
-    gramaticas: [],
+    notebooks: [],
     loading: false,
   };
 
   componentDidMount() {
     axios
-      .get('https://markerpinina.firebaseio.com/gramaticas.json')
+      .get('https://markerpinina.firebaseio.com/notebook.json')
       .then(response => {
         this.setState({
-          gramaticas: response.data,
+          notebooks: response.data,
           loading: false,
         });
       })
@@ -25,20 +25,20 @@ class GramaticaGrid extends Component {
   }
 
   render() {
-    const { gramaticas, loading } = this.state;
+    const { notebooks, loading } = this.state;
 
-    let gramaticasLoad = <Spinner />;
+    let notebooksLoad = <Spinner />;
     let loadingSpinner = null;
 
     if (loading) {
       loadingSpinner = <Spinner />;
     }
 
-    if (gramaticas) {
-      gramaticasLoad = (
+    if (notebooks) {
+      notebooksLoad = (
         <>
-          {gramaticas.map(gram => (
-            <GramaticaItem key={gram.id} {...gram} />
+          {notebooks.map(note => (
+            <NotebookItem key={note.id} {...note} />
           ))}
         </>
       );
@@ -46,9 +46,9 @@ class GramaticaGrid extends Component {
     return (
       <>
         {loadingSpinner}
-        {gramaticasLoad}
+        {notebooksLoad}
       </>
     );
   }
 }
-export default GramaticaGrid;
+export default NotebookGrid;
