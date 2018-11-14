@@ -4,10 +4,10 @@ const path = require('path');
 const app = express();
 const router = express.Router();
 const bodyParser = require('body-parser');
-// const webpack = require('webpack');
-// const middleware = require('webpack-dev-middleware');
-// const hotmiddleware = require('webpack-hot-middleware');
-// const webpackConfig = require('../webpack.config.js');
+const webpack = require('webpack');
+const middleware = require('webpack-dev-middleware');
+const hotmiddleware = require('webpack-hot-middleware');
+const webpackConfig = require('../webpack.config.js');
 
 const logger = require('./logger.js');
 const home = require('./routes/home.js');
@@ -21,22 +21,22 @@ app.use(logger);
 app.use(express.static(path.resolve(__dirname, 'dist')));
 app.use(bodyParser.json());
 
-// const compiler = webpack(webpackConfig);
+const compiler = webpack(webpackConfig);
 
-// app.use(
-//   hotmiddleware(compiler, {
-//     log: false,
-//     reload: true,
-//   }),
-// );
+app.use(
+  hotmiddleware(compiler, {
+    log: false,
+    reload: true,
+  }),
+);
 
-// app.use(
-//   middleware(compiler, {
-//     noInfo: true,
-//     publicPath: webpackConfig.dev,
-//     watchOptions: true,
-//   }),
-// );
+app.use(
+  middleware(compiler, {
+    noInfo: true,
+    publicPath: webpackConfig.dev,
+    watchOptions: true,
+  }),
+);
 
 // ROUTER
 app.use('/', home);
