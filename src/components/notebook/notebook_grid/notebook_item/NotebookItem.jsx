@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './NotebookItem.scss';
-import { CURRENT_MESES } from '../../../../config/date';
+import Date from '../../../common/date/Date';
 
 const NotebookItem = ({ title, content, date, images, categorias }) => {
   const shortContent = content.slice(0, 100) + '...';
@@ -16,10 +16,7 @@ const NotebookItem = ({ title, content, date, images, categorias }) => {
           <hr />
           <div className="row">
             <div className="col">
-              <p className={classes.DateStyle}>
-                <i className="bx bx-calendar" />
-                {CURRENT_MESES || date}
-              </p>
+              <Date date={date} />
             </div>
             <div className="col">
               <div className={classes.Categoria}>

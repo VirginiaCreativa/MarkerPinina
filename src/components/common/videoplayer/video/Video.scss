@@ -1,3 +1,10 @@
-.VideoPlayerLayout {
+.Video {
   height: 200px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .ControlsVideo {
+    position: absolute;
+  }
 }

@@ -7,7 +7,7 @@ import NotebookGrid from '../../components/notebook/notebook_grid/NotebookGrid';
 
 class Dashboard extends Component {
   state = {
-    switcher: true,
+    switcher: false,
   };
 
   handleSwitcherList = () => {

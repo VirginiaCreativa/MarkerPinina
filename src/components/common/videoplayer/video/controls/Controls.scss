@@ -1,0 +1,13 @@
+.Controls {
+  button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    :global {
+      .bx-play-circle {
+        color: #fff;
+        font-size: 60px;
+      }
+    }
+  }
+}

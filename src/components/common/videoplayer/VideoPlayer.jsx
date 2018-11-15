@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable jsx-a11y/media-has-caption */
+/* eslint-disable no-return-assign */
 import React, { Component } from 'react';
 import axios from 'axios';
 import VideoPlayerLayout from './layout/VideoPlayerLayout';
@@ -10,9 +9,10 @@ class VideoPlayer extends Component {
   state = {
     video: false,
     loading: true,
+    play: true,
   };
 
-  componentWillMount() {
+  componentDidMount() {
     axios
       .get('/palabras')
       .then(response => {
@@ -27,10 +27,36 @@ class VideoPlayer extends Component {
       });
   }
 
+  handlerTogglePlay = () => {
+    this.videoPalabraRef.play();
+    this.setState({
+      play: false,
+    });
+  };
+
+  handlerToggleOut = () => {
+    this.videoPalabraRef.pause();
+    this.videoPalabraRef.currentTime = 0;
+    this.videoPalabraRef.load();
+    this.setState({
+      play: true,
+    });
+  };
+
   render() {
-    const { video, loading } = this.state;
+    const { video, loading, pause, play } = this.state;
     const { srcVideo } = this.props;
 
+    const videoPlayerShow = (
+      <Video
+        paused={pause}
+        played={play}
+        srcVideo={srcVideo}
+        videoPalabraRef={v => (this.videoPalabraRef = v)}
+        clickedOver={this.handlerTogglePlay}
+        clickedOut={this.handlerToggleOut}
+      />
+    );
     let loadingSpinner = null;
 
     if (loading) {
@@ -39,7 +65,7 @@ class VideoPlayer extends Component {
 
     return (
       <VideoPlayerLayout>
-        {video ? <Video srcVideo={srcVideo} /> : loadingSpinner}
+        {video ? videoPlayerShow : loadingSpinner}
       </VideoPlayerLayout>
     );
   }

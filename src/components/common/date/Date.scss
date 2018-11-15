@@ -1,0 +1,12 @@
+.DateStyle {
+  p {
+    font-size: 12px;
+    color: $gray_light;
+    font-weight: 300;
+  }
+  :global {
+    .bx-calendar {
+      margin-right: 6px;
+    }
+  }
+}
