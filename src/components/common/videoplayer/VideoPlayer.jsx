@@ -14,7 +14,7 @@ class VideoPlayer extends Component {
 
   componentDidMount() {
     axios
-      .get('/palabras')
+      .get('/significados')
       .then(response => {
         this.setState({
           video: true,

@@ -11,10 +11,10 @@ const webpackConfig = require('../webpack.config.js');
 const paths = require('../webpack/paths');
 const logger = require('./logger.js');
 const home = require('./routes/home.js');
-const dashboard = require('./routes/dashboard.js');
-const palabras = require('./routes/palabras.js');
-const proyectos = require('./routes/proyectos.js');
-const notebook = require('./routes/notebook.js');
+const significados = require('./routes/significados.js');
+const notascornell = require('./routes/notascornell.js');
+const traduccion = require('./routes/traduccion.js');
+const foros = require('./routes/foros.js');
 
 const compiler = webpack(webpackConfig);
 
@@ -40,10 +40,10 @@ app.use(
 
 // ROUTER
 app.use('/', home);
-app.use('/dashboard', dashboard);
-app.use('/palabras', palabras);
-app.use('/proyectos', proyectos);
-app.use('/notebook', notebook);
+app.use('/significados', significados);
+app.use('/notascornell', notascornell);
+app.use('/traduccion', traduccion);
+app.use('/foros', foros);
 
 app.use('/', router);
 

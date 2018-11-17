@@ -12,7 +12,7 @@ class PalabrasGrid extends Component {
   componentDidMount() {
     setTimeout(() => {
       axios
-        .get('/palabras')
+        .get('/significados')
         .then(response => {
           this.setState({
             palabras: response.data,

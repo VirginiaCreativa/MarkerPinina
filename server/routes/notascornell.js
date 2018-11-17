@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
   const datas = await axios
-    .get('https://markerpinina.firebaseio.com/palabras.json')
+    .get('https://markerpinina.firebaseio.com/notascornell.json')
     .then(response => response.data)
     .catch(error => console.log(error));
   res.json(datas);

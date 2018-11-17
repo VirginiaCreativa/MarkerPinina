@@ -11,7 +11,7 @@ class PalabrasLists extends Component {
 
   componentDidMount() {
     axios
-      .get('/palabras')
+      .get('/significados')
       .then(response => {
         this.setState({
           palabras: response.data,

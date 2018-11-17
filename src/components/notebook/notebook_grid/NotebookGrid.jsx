@@ -11,7 +11,7 @@ class NotebookGrid extends Component {
 
   componentDidMount() {
     axios
-      .get('/notebook')
+      .get('/notascornell')
       .then(response => {
         this.setState({
           notebooks: response.data,
