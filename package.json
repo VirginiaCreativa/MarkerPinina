@@ -4,12 +4,12 @@
   "description": "Boilerplate for react and webpack",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server",
+    "start": "nodemon server/server.js --verbose && cross-env NODE_ENV=development webpack-serve",
+    "server": "nodemon server/server.js --verbose",
     "build": "cross-env NODE_ENV=production webpack",
     "format": "prettier --write 'packages/**/*.js'",
     "test": "jest --watchAll --coverage",
-    "precommit": "lint-staged",
-    "server": "nodemon server/server.js"
+    "precommit": "lint-staged"
   },
   "lint-staged": {
     "*.{js,jsx,css,md}": [
@@ -89,6 +89,7 @@
     "clean-webpack-plugin": "0.1.19",
     "connect-history-api-fallback": "^1.5.0",
     "cross-env": "5.2.0",
+    "css-hot-loader": "^1.4.2",
     "css-loader": "1.0.0",
     "enzyme": "3.7.0",
     "enzyme-adapter-react-16": "1.6.0",
@@ -103,6 +104,7 @@
     "eslint-plugin-react": "7.11.1",
     "eslint-watch": "4.0.2",
     "express": "^4.16.4",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "2.0.0",
     "html-webpack-plugin": "3.2.0",
     "husky": "1.1.2",
@@ -132,7 +134,9 @@
     "webpack": "4.23.1",
     "webpack-cli": "3.1.2",
     "webpack-dev-server": "3.1.10",
+    "webpack-hot-client": "^4.1.1",
     "webpack-hot-middleware": "^2.24.3",
-    "webpack-merge": "4.1.4"
+    "webpack-merge": "4.1.4",
+    "webpack-serve": "^2.0.2"
   }
 }

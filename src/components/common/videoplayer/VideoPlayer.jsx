@@ -37,7 +37,6 @@ class VideoPlayer extends Component {
   handlerToggleOut = () => {
     this.videoPalabraRef.pause();
     this.videoPalabraRef.currentTime = 0;
-    this.videoPalabraRef.load();
     this.setState({
       play: true,
     });

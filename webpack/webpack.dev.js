@@ -1,5 +1,4 @@
 const webpack = require('webpack');
-
 const commonPaths = require('./paths');
 
 module.exports = {
@@ -26,6 +25,9 @@ module.exports = {
           },
           {
             loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
           },
           {
             loader: 'sass-resources-loader',
@@ -42,8 +44,12 @@ module.exports = {
   },
   devServer: {
     contentBase: commonPaths.outputPath,
+    watchContentBase: true,
     compress: true,
     hot: true,
+    stats: {
+      colors: true,
+    },
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
 };

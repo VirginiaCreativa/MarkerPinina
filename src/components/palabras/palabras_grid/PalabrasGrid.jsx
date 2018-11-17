@@ -10,18 +10,20 @@ class PalabrasGrid extends Component {
   };
 
   componentDidMount() {
-    axios
-      .get('/palabras')
-      .then(response => {
-        this.setState({
-          palabras: response.data,
-          loading: false,
+    setTimeout(() => {
+      axios
+        .get('/palabras')
+        .then(response => {
+          this.setState({
+            palabras: response.data,
+            loading: false,
+          });
+        })
+        .catch(error => {
+          console.log(error);
+          this.setState({ loading: true });
         });
-      })
-      .catch(error => {
-        console.log(error);
-        this.setState({ loading: true });
-      });
+    }, 4000);
   }
 
   render() {

@@ -7,7 +7,7 @@ import NotebookGrid from '../../components/notebook/notebook_grid/NotebookGrid';
 
 class Dashboard extends Component {
   state = {
-    switcher: false,
+    switcher: true,
   };
 
   handleSwitcherList = () => {
@@ -28,7 +28,7 @@ class Dashboard extends Component {
             <div className="row">
               <div className="col">
                 <HeadingQuantity
-                  title="Palabras"
+                  title="Significados"
                   quantited="8"
                   colored="#ff6b6b"
                 />
@@ -47,12 +47,16 @@ class Dashboard extends Component {
             <div>{switcher ? <PalabrasLists /> : <PalabrasGrid />}</div>
           </div>
           <div className="col-5">
-            <HeadingQuantity title="Notebook" quantited="6" colored="#1fd1a1" />
+            <HeadingQuantity
+              title="Método Cornell"
+              quantited="6"
+              colored="#1fd1a1"
+            />
             <NotebookGrid />
           </div>
           <div className="col-2">
             <HeadingQuantity
-              title="Proyectos"
+              title="Traducción"
               quantited="3"
               colored="#3a3b98"
             />

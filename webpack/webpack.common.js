@@ -34,15 +34,18 @@ module.exports = {
         ],
       },
       {
-        test: /\.svg$/,
-        use: ['svg-loader'],
+        test: /\.(json)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: commonPaths.jsonFolder,
+            },
+          },
+        ],
       },
       {
-        test: /\.(woff|woff2|eot|ttf|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'url-loader?limit=80000',
-      },
-      {
-        test: /\.(woff|woff2|eot|ttf|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        test: /\.(woff2|ttf|woff|eot)$/,
         use: [
           {
             loader: 'file-loader',
@@ -54,21 +57,27 @@ module.exports = {
       },
     ],
   },
+  devtool: 'inline-source-map',
   serve: {
     add: app => {
       app.use(convert(history()));
     },
     content: commonPaths.entryPath,
-    devServer: {
+    dev: {
       publicPath: commonPaths.outputPath,
-      contentBase: commonPaths.entryPath,
-      watchContentBase: true,
-      compress: true,
+      hot: true,
+      reload: true,
+    },
+    open: false,
+    reload: true,
+    hotClient: {
+      autoConfigure: false,
+      allEntries: true,
     },
   },
   resolve: {
     modules: ['src', 'node_modules'],
-    extensions: ['*', '.js', '.jsx', '.css', '.scss'],
+    extensions: ['*', '.js', '.jsx', '.json', '.css', '.scss'],
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
@@ -76,6 +85,7 @@ module.exports = {
     new webpack.ProgressPlugin(),
     new HtmlWebpackPlugin({
       template: commonPaths.templatePath,
+      filename: 'index.html',
     }),
   ],
 };

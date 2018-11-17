@@ -5,7 +5,7 @@ import classes from './Sidebar.scss';
 const Sidebar = () => (
   <div className={classes.Sidebar}>
     <NavLink to="/" exact activeClassName="selected" className="linkActive">
-      <i className="bx bx-dashboard" />
+      <i className="bx bx-home" />
     </NavLink>
     <NavLink to="/palabras" activeClassName="selected" className="linkActive">
       <i className="bx bx-pin" />
@@ -14,7 +14,7 @@ const Sidebar = () => (
       <i className="bx bx-book-bookmark" />
     </NavLink>
     <NavLink to="/proyectos" activeClassName="selected" className="linkActive">
-      <i className="bx bx-idea" />
+      <i className="bx bx-transfer" />
     </NavLink>
   </div>
 );
