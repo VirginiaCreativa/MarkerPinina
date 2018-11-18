@@ -7,14 +7,25 @@ const Sidebar = () => (
     <NavLink to="/" exact activeClassName="selected" className="linkActive">
       <i className="bx bx-home" />
     </NavLink>
-    <NavLink to="/palabras" activeClassName="selected" className="linkActive">
+    <NavLink
+      to="/significados"
+      activeClassName="selected"
+      className="linkActive"
+    >
       <i className="bx bx-pin" />
     </NavLink>
-    <NavLink to="/notebook" activeClassName="selected" className="linkActive">
+    <NavLink
+      to="/notascornell"
+      activeClassName="selected"
+      className="linkActive"
+    >
       <i className="bx bx-book-bookmark" />
     </NavLink>
-    <NavLink to="/proyectos" activeClassName="selected" className="linkActive">
+    <NavLink to="/traduccion" activeClassName="selected" className="linkActive">
       <i className="bx bx-transfer" />
+    </NavLink>
+    <NavLink to="/foros" activeClassName="selected" className="linkActive">
+      <i className="bx bx-message-detail" />
     </NavLink>
   </div>
 );

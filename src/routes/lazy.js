@@ -1,23 +1,28 @@
 import Loadable from 'react-loadable';
 import Spinner from '../components/common/spinner/Spinner';
 
-export const Dashboard = Loadable({
-  loader: () => import('../pages/Dashboard/Dashboard'),
+export const Home = Loadable({
+  loader: () => import('../pages/Home/Home'),
   loading: Spinner,
 });
 
-export const Palabras = Loadable({
-  loader: () => import('../pages/Palabras'),
+export const Significados = Loadable({
+  loader: () => import('../pages/Sigfinicados'),
   loading: Spinner,
 });
 
-export const Notebook = Loadable({
-  loader: () => import('../pages/Notebook'),
+export const NotasCornell = Loadable({
+  loader: () => import('../pages/Notascornell'),
   loading: Spinner,
 });
 
-export const Proyectos = Loadable({
-  loader: () => import('../pages/Proyectos'),
+export const Traduccion = Loadable({
+  loader: () => import('../pages/Traduccion'),
+  loading: Spinner,
+});
+
+export const Foros = Loadable({
+  loader: () => import('../pages/Foros'),
   loading: Spinner,
 });
 

@@ -2,7 +2,14 @@
 import React, { Component } from 'react';
 import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 
-import { Dashboard, Palabras, Notebook, Proyectos, NotFound } from './lazy';
+import {
+  Home,
+  Significados,
+  NotasCornell,
+  Traduccion,
+  Foros,
+  NotFound,
+} from './lazy';
 
 class Router extends Component {
   state = {};
@@ -11,11 +18,11 @@ class Router extends Component {
     return (
       <div>
         <Switch>
-          <Route path="/notebook" component={Notebook} />
-          <Route path="/proyectos" component={Proyectos} />
-          <Route path="/palabras" component={Palabras} />
-          <Route path="/dashboard" component={Dashboard} />
-          <Route path="/" exact component={Dashboard} />
+          <Route path="/foros" component={Foros} />
+          <Route path="/significados" component={Significados} />
+          <Route path="/traduccion" component={Traduccion} />
+          <Route path="/notascornell" component={NotasCornell} />
+          <Route path="/" exact component={Home} />
           <Route path="/*" component={NotFound} />
           <Redirect from="/*" to="/notfound" />
         </Switch>

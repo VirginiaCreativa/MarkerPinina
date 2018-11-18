@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import classes from './Dashboard.scss';
+import classes from './Home.scss';
 import HeadingQuantity from '../../components/common/heading_quantity/HeadingQuantity';
 import PalabrasLists from '../../components/palabras/palabras_list/PalabrasList';
 import PalabrasGrid from '../../components/palabras/palabras_grid/PalabrasGrid';
