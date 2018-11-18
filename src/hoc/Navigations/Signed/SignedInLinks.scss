@@ -1,33 +1,36 @@
 .SignedInLinks {
-  display: flex;
-  align-items: center;
-  height: 36px;
   a {
     margin: 0 8px;
     color: $gray_dark;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 36px;
   }
 } 
+.Grid {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  border-left: 0.5px solid $write_gray_1;  
+  border-right: 0.5px solid $write_gray_1;
+  padding: 0 30px; 
+  height: 80px; 
+}
 .User {
    text-align: center;
    display: flex;
    align-items: center;
-   height: 36px;
   .Circle {
     background-color: $write_gray_3;
     background-image: url('https://images.pexels.com/photos/935756/pexels-photo-935756.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     max-width: 100%;
     max-height: 100%;
     background-size: cover;
-    border-radius: 100px;
+    border-radius: 100%;
     font-size: 12px;
-    height: 30px !important;
-    width: 30px;
+    height: 40px !important;
+    width: 40px;
     text-align: center;
-    line-height: 2.5;
     margin-right: 10px;
     display: block;
   }
@@ -46,18 +49,20 @@
   border: none;
   background-color: $blue;
   color: #fff !important;
-  border-radius: 100px;
-  display: block;
-  width: 32px;
-  height: 32px;
+  border-radius: 2px;
   cursor: pointer;
-  line-height: 1;
+  line-height: 2;
+  padding: 6px 14px;
   transition: all ease-in-out 300ms;
-  box-shadow: 0px 12px 10px -10px rgba(0, 0, 0, 0.2);
+  font-weight: 300;
+  font-size: 14px;
+  // box-shadow: 0px 12px 10px -10px rgba(0, 0, 0, 0.2);
   :global {
-    .bx-plus {
+    .bx-plus-circle {
+      color: #fff;
       font-size: 20px !important;
-      transform: translate(-1px, 0);
+      margin-right: 6px;
+      transform: translate(0, 3px);
     }
   }
   &:hover {
@@ -73,7 +78,7 @@
     position: absolute;
     opacity: 0;
     top: 0;
-    left: -67px;
+    left: -20px;
     // transform: translate(0px, -22px);
     background-color: #fff;
     border-radius: 4px;
@@ -141,13 +146,6 @@
       }
     }
   } 
-  
-  :global {
-    .bx {
-      color: #fff;
-      font-size: 14px;
-    }
-  }
 }
 :global {
   .bx-log-out {
