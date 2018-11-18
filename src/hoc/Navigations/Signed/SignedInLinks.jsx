@@ -5,6 +5,10 @@ import classes from './SignedInLinks.scss';
 const SignedInLinks = () => (
   <>
     <div className={['nav', classes.SignedInLinks].join(' ')}>
+      <div className={[classes.Grid, classes.Buscador].join(' ')}>
+        <i className="bx bx-search" />
+        <input type="text" placeholder="Buscador" />
+      </div>
       <div className={classes.Grid}>
         <button className={classes.btnCreate} type="button">
           <i className="bx bx-plus-circle" />

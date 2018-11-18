@@ -10,11 +10,24 @@
 .Grid {
   display: flex;
   align-items: center;
-  height: 60px;
-  border-left: 0.5px solid $write_gray_1;  
-  border-right: 0.5px solid $write_gray_1;
-  padding: 0 30px; 
-  height: 80px; 
+  border-left: 1px solid $write_gray_1;  
+  padding: 0 20px; 
+  height: 60px; 
+}
+.Buscador {
+  width: 200px;
+  :global {
+    .bx {
+      color: $gray_light;
+      margin-right: 6px;
+      font-size: 20px;
+    }
+  }
+  input {
+    border: none;
+    caret-color: $blue;
+    color: $gray_medium;
+  }
 }
 .User {
    text-align: center;
@@ -28,8 +41,8 @@
     background-size: cover;
     border-radius: 100%;
     font-size: 12px;
-    height: 40px !important;
-    width: 40px;
+    height: 36px !important;
+    width: 36px;
     text-align: center;
     margin-right: 10px;
     display: block;
@@ -43,6 +56,11 @@
       color: $blue;
     }
   }
+  :global {
+    .bx {
+      margin-left: 10px;
+    }
+  }
 }
 .btnCreate {
   position: relative;
@@ -52,9 +70,8 @@
   border-radius: 2px;
   cursor: pointer;
   line-height: 2;
-  padding: 6px 14px;
+  padding: 4px 14px;
   transition: all ease-in-out 300ms;
-  font-weight: 300;
   font-size: 14px;
   // box-shadow: 0px 12px 10px -10px rgba(0, 0, 0, 0.2);
   :global {
