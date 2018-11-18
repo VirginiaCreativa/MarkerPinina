@@ -1,0 +1,18 @@
+.Buscador {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  :global {
+    .bx {
+      color: $gray_light;
+      margin-right: 6px;
+      font-size: 20px;
+    }
+  }
+  input {
+    border: none;
+    caret-color: $blue;
+    color: $gray_medium;
+    width: 140px;
+  }
+}

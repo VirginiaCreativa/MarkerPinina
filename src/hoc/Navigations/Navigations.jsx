@@ -5,7 +5,7 @@ import SignedOutnLinks from './Signed/SignedOutLinks';
 
 class Navigations extends Component {
   state = {
-    user: false,
+    user: true,
     login: true,
   };
 
@@ -14,7 +14,7 @@ class Navigations extends Component {
     return (
       <>
         <div className={classes.Navigations}>
-          {login ? <SignedInLinks user={user} /> : <SignedOutnLinks />}
+          {login ? <SignedInLinks userSign={user} /> : <SignedOutnLinks />}
         </div>
       </>
     );

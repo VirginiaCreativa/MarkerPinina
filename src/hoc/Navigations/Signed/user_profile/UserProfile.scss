@@ -1,0 +1,61 @@
+.UserProfile {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .CircleImg {
+    background-color: $write_gray_3;
+    background-image: url('https://images.pexels.com/photos/935756/pexels-photo-935756.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    max-width: 100%;
+    max-height: 100%;
+    background-size: cover;
+    border-radius: 100%;
+    font-size: 12px;
+    height: 36px !important;
+    width: 36px;
+    text-align: center;
+    margin-right: 10px;
+    display: block;
+  }
+
+  .CircleAnomy {
+    background-color: $write_gray_3;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 100%;
+    font-size: 12px;
+    font-weight: 700;
+    height: 36px !important;
+    width: 36px;
+    text-align: center;
+    margin-right: 10px;
+    line-height: 3;
+  }
+
+  p {
+    line-height: 4;
+    margin-bottom: 0;
+    text-transform: capitalize;
+    color: $gray_medium;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  .toggleMenuUser {
+    position: absolute;
+    background-color: #fff;
+    height: 300px;
+    width: 200px;
+    transform: translate(0px, 60px);
+
+  }
+
+  :global {
+    .bx {
+      margin-left: 10px;
+    }
+  }
+}
