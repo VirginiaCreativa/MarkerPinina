@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import classes from './SignedInLinks.scss';
 
-const SignedInLinks = () => (
+const SignedInLinks = ({ user }) => (
   <>
     <div className={['nav', classes.SignedInLinks].join(' ')}>
       <div className={[classes.Grid, classes.Buscador].join(' ')}>
@@ -40,7 +40,12 @@ const SignedInLinks = () => (
       </div>
       <div className={classes.Grid}>
         <Link to="/" className={classes.User}>
-          <div className={classes.Circle}>VS</div>
+          {user ? (
+            <div className={classes.CircleImg}>VS</div>
+          ) : (
+            <div className={classes.CircleAnomy}>VS</div>
+          )}
+
           <p>Virginia Velásquez</p>
           <i className="bx bx-chevron-down" />
         </Link>
