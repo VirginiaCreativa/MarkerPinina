@@ -17,18 +17,15 @@
       transform: translate(0, 3px);
     }
   }
-
   &:hover {
     box-shadow: 0px 16px 10px -10px rgba(0, 0, 0, 0.2);
     background-color: $blue_medium;
     color: #fff;
-
     .Menus {
       transform: translate(0px, 60px);
       opacity: 1;
     }
   }
-
   .Menus {
     position: absolute;
     opacity: 0;
@@ -79,7 +76,6 @@
         &:last-child {
           border-bottom: none;
         }
-
         a {
           line-height: 1;
           margin-bottom: 0;

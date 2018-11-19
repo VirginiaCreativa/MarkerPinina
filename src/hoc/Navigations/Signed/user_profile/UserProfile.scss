@@ -47,6 +47,11 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    &:hover {
+      .isMenuOpen {
+        top: 200px;
+      }
+    }
     :global {
       .bx {
         font-size: 22px;
@@ -59,11 +64,94 @@
       }
     }
   }
+  .Fade {
+    animation: fade-in-keyframes 0.5s;
+  }
+  @keyframes fade-in-keyframes {
+    from {
+      opacity: 0;
+      top: 0;
+    }
+
+    to {
+      opacity: 1;
+      top: 60px;
+    }
+  }
   .isMenuOpen {
     position: absolute;
     background-color: #fff;
-    height: 300px;
-    width: 200px;
+    width: 160px;
     right: 0;
+    top: 60px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+    .Triangule {
+      position: absolute;
+      right: 0;
+      width: 60px;
+      height: 60px;
+      overflow: hidden;
+      top: -60px;
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.15);
+      &:after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        transform: rotate(45deg);
+        top: 60px;
+        left: 5px;
+        box-shadow: -1px -1px 3px -2px rgba(0, 0, 0, 0.5);
+      }
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        list-style: none;
+        height: 40px;
+        padding: 0 12px;
+        line-height: 2;
+        &:last-child {
+          border-top: 1px solid $write_gray_1;
+        }
+        a {
+          margin-bottom: 0;
+          width: 200px;
+          font-size: 15px;
+          color: $gray_medium;
+          display: flex;
+          justify-content: flex-start;
+          :global {
+              .bx {
+                color: $gray_light;
+                font-size: 20px;
+                margin-right: 6px;
+                position: relative;
+                top: 4px;
+              }
+              .bx-user-circle {
+                font-size: 20px !important;
+              }
+            }
+          &:hover {
+            color: $blue;
+            :global {
+              .bx-user-circle,
+              .bx-cog,
+              .bx-lock-open {
+                color: $blue;
+              }
+            }
+          }
+        }          
+      }
+    }
   }
 }
