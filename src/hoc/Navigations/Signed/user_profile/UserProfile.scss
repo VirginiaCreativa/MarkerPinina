@@ -43,19 +43,27 @@
       color: $blue;
     }
   }
-
-  .toggleMenuUser {
+  .btnMenuUser {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    :global {
+      .bx {
+        font-size: 22px;
+        position: relative;
+        top: 3px;
+        color: $gray_light;
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
+  .isMenuOpen {
     position: absolute;
     background-color: #fff;
     height: 300px;
     width: 200px;
-    transform: translate(0px, 60px);
-
-  }
-
-  :global {
-    .bx {
-      margin-left: 10px;
-    }
+    right: 0;
   }
 }
