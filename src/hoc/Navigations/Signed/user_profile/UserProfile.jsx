@@ -12,39 +12,14 @@ class UserProfile extends Component {
   };
 
   componentDidMount() {
-    const elm = this.buttonAnim;
-    elm.addEventListener('animationstart', this.handleShowMenu);
-
-    // outMenu.addEventListener('click', (e) => {
-    //   const yMove = e.offsetY;
-    //   // console.log('SCREEN', yMove);
-    //   if (yMove >= '60') {
-    //     console.log('SALIR', yMove);
-    //     return this.handleHideMenu;
-    //   }
-    // });
-    document.addEventListener('click', this.handleHideMenu);
+    document.addEventListener('mousemove', this.handleHideMenu);
+    this.fadeMenu.addEventListener('animationend', this.handleShowMenu);
   }
 
   componentWillUnmount() {
-    const elm = this.buttonAnim;
-    elm.addEventListener('animationend', this.handleShowMenu);
-    document.removeEventListener('click', this.handleHideMenu);
+    document.removeEventListener('mousemove', this.handleHideMenu);
+    this.fadeMenu.removeEventListener('animationend', this.handleShowMenu);
   }
-
-  // componentDidUpdate(prevProps, prevState) {
-  //   if (prevState.isMenu && !prevState.isMenu) {
-  //     document.addEventListener('mousemove', e => {
-  //       if (e.clientX === '822' && e.clientX === '185') {
-  //         console.log('SALIR');
-  //       }
-  //     });
-  //   } else {
-  //     document.removeEventListener('mousemove', e => {
-  //       console.log('REMOVE DiDMount', e.clientX, e.clientY);
-  //     });
-  //   }
-  // }
 
   handleShowMenu = () => {
     this.setState(prevState => ({
@@ -56,7 +31,7 @@ class UserProfile extends Component {
   handleHideMenu = e => {
     const xClose = e.offsetX;
     const yClose = e.offsetY;
-    if (xClose >= '60' || yClose <= '1200') {
+    if (xClose >= '1200' || yClose >= '80') {
       this.setState({ isMenu: false });
     }
   };
@@ -68,8 +43,11 @@ class UserProfile extends Component {
     if (isMenu) {
       showMenu = (
         <div
-          className={[classes.isMenuOpen, fade ? classes.Fade : ' '].join(' ')}
-          onClick={this.handleHideMenu}
+          className={[
+            classes.isMenuOpen,
+            fade ? classes.FadeOn : classes.FadeOff,
+          ].join(' ')}
+          ref={a => (this.fadeMenu = a)}
         >
           <div className={classes.Triangule} />
           <ul>
@@ -106,12 +84,10 @@ class UserProfile extends Component {
 
           <p>Virginia Velásquez</p>
           <button
-            ref={a => (this.buttonAnim = a)}
             type="button"
-            className={[classes.btnMenuUser, fade ? classes.Fade : ' '].join(
-              ' ',
-            )}
+            className={classes.btnMenuUser}
             onMouseOver={this.handleShowMenu}
+            ref={a => (this.fadeMenu = a)}
           >
             <i className="bx bx-chevron-down" />
           </button>

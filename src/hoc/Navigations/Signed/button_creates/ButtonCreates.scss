@@ -25,81 +25,81 @@
       transform: translate(0px, 60px);
       opacity: 1;
     }
-  }
-  .Menus {
+  } 
+}
+.Menus {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  background-color: #fff;
+  border-radius: 4px;
+  width: 160px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: all ease-in-out 300ms;
+
+  .Triangule {
     position: absolute;
-    opacity: 0;
-    top: 0;
-    left: -20px;
-    // transform: translate(0px, -22px);
-    background-color: #fff;
-    border-radius: 4px;
-    width: 160px;
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
-    transition: all ease-in-out 300ms;
+    left: 32%;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    top: -60px;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.15);
 
-    .Triangule {
+    &:after {
+      content: "";
       position: absolute;
-      left: 32%;
-      width: 60px;
-      height: 60px;
-      overflow: hidden;
-      top: -60px;
-      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.15);
-
-      &:after {
-        content: "";
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        background: #fff;
-        transform: rotate(45deg);
-        top: 60px;
-        left: 5px;
-        box-shadow: -1px -1px 3px -2px rgba(0, 0, 0, 0.5);
-      }
+      width: 50px;
+      height: 50px;
+      background: #fff;
+      transform: rotate(45deg);
+      top: 60px;
+      left: 5px;
+      box-shadow: -1px -1px 3px -2px rgba(0, 0, 0, 0.5);
     }
+  }
 
-    ul {
-      padding: 0;
-      margin: 0;
-      width: 100%;
+  ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    li {
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
+      list-style: none;
+      border-bottom: 1px solid $write_gray_1;
+      padding: 14px 10px;
 
-      li {
-        display: flex;
-        list-style: none;
-        border-bottom: 1px solid $write_gray_1;
-        padding: 14px 10px;
-        &:last-child {
-          border-bottom: none;
-        }
-        a {
-          line-height: 1;
-          margin-bottom: 0;
-          font-size: 16px;
-          color: $gray_medium;
-          &:hover {
-            color: $blue;
-            :global {
-              .bx-pin,
-              .bx-documentation,
-              .bx-idea {
-                color: $blue;
-              }
+      &:last-child {
+        border-bottom: none;
+      }
+
+      a {
+        line-height: 1;
+        margin-bottom: 0;
+        font-size: 16px;
+        color: $gray_medium;
+        &:hover {
+          color: $blue;
+          :global {
+            .bx-pin,
+            .bx-documentation,
+            .bx-idea {
+              color: $blue;
             }
           }
-
-          :global {
-            .bx {
-              color: $gray_light;
-              font-size: 22px;
-              margin-right: 6px;
-              position: relative;
-              top: 4px;
-            }
+        }
+        :global {
+          .bx {
+            color: $gray_light;
+            font-size: 22px;
+            margin-right: 6px;
+            position: relative;
+            top: 4px;
           }
         }
       }
