@@ -89,13 +89,12 @@
         justify-content: flex-start;
         align-items: center;
         list-style: none;
-        height: 40px;
-        padding: 0 12px;
+        padding: 10px 12px;
         line-height: 2;
-        border-bottom: 1px solid $write_gray_1;
-        &:last-child {
-          border-bottom: none;
-        }
+        // border-bottom: 1px solid $write_gray_1;
+        // &:last-child {
+        //   border-bottom: none;
+        // }
 
         a {
           margin-bottom: 0;
@@ -104,7 +103,6 @@
           color: $gray_medium;
           display: flex;
           justify-content: flex-start;
-
           :global {
             .bx {
               color: $gray_light;

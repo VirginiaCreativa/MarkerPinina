@@ -29,7 +29,7 @@ class UserProfile extends Component {
   handleHideMenu = e => {
     const xClose = e.offsetX;
     const yClose = e.offsetY;
-    if (xClose >= '1200' || yClose >= '80') {
+    if (xClose >= '1200' || yClose >= '220') {
       this.setState({
         isMenu: false,
         fade: false,
@@ -51,6 +51,19 @@ class UserProfile extends Component {
         >
           <div className={classes.Triangule} />
           <ul>
+            <li className={classes.Storage}>
+              <div className={classes.infoStorage}>
+                <p>4,2 GB de 15 GB usado</p>
+                <div className={classes.linePorce}>
+                  <div className={classes.cantPorce} />
+                  <div className={classes.bgPorce} />
+                </div>
+              </div>
+              <Link to="/significados">
+                <i className="bx bx-cloud" />
+                Almacenamiento
+              </Link>
+            </li>
             <li>
               <Link to="/significados">
                 <i className="bx bx-user-circle" />

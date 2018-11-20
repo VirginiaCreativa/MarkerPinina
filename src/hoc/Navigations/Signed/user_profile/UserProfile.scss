@@ -90,7 +90,7 @@
   .isMenuOpen {
     position: absolute;
     background-color: #fff;
-    width: 160px;
+    width: 166px;
     right: 0;
     top: 60px;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
@@ -124,8 +124,8 @@
         justify-content: flex-start;
         align-items: center;
         list-style: none;
-        height: 40px;
-        padding: 0 12px;
+        // height: 40px;
+        padding: 8px 12px;
         line-height: 2;
         &:last-child {
           border-top: 1px solid $write_gray_1;
@@ -159,7 +159,55 @@
               }
             }
           }
-        }          
+        }
+        &.Storage {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          flex-direction: column;
+          .infoStorage {
+            width: 100%;
+            margin-bottom: 6px;
+            p {
+              margin-bottom: 0;
+              font-size: 11px;
+              display: block;
+              text-transform: none;
+              height: 38px;
+              &:hover {
+                color: $gray_medium;
+              }
+            } 
+            .linePorce {
+              display: block;
+              height: 3px;
+              position: relative;
+              border-radius: 4px;
+              .cantPorce {
+                border-bottom: 3px solid $blue;
+                position: absolute;
+                width: 30%;
+                z-index: 2;
+              }
+              .bgPorce {
+                border-bottom: 3px solid $write_gray_3;
+                position: absolute;
+                width: 100%;
+                z-index: 1;
+              }
+            }
+            :global {
+              .bx {
+                color: $gray_light;
+                font-size: 20px;
+                margin-right: 6px;
+              }
+            }
+            a {
+              display: block;
+            }
+          }
+        }
       }
     }
   }
