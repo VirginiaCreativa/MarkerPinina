@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import classes from './Home.scss';
 import HeadingQuantity from '../../components/common/heading_quantity/HeadingQuantity';
-import PalabrasLists from '../../components/palabras/palabras_list/PalabrasList';
-import PalabrasGrid from '../../components/palabras/palabras_grid/PalabrasGrid';
-import NotebookGrid from '../../components/notebook/notebook_grid/NotebookGrid';
+import SignificadosList from '../../components/significados/significados_list/SignificadosList';
+import SignificadosGrid from '../../components/significados/significados_grid/SignificadosGrid';
+import NotasCornellGrid from '../../components/notascornell/notascornella_grid/NotascornellaGrid';
 
-class Dashboard extends Component {
+class Home extends Component {
   state = {
     switcher: true,
   };
@@ -44,15 +44,15 @@ class Dashboard extends Component {
                 </div>
               </div>
             </div>
-            <div>{switcher ? <PalabrasLists /> : <PalabrasGrid />}</div>
+            <div>{switcher ? <SignificadosList /> : <SignificadosGrid />}</div>
           </div>
           <div className="col-5">
             <HeadingQuantity
-              title="Método Cornell"
+              title="Notas Cornell"
               quantited="6"
               colored="#1fd1a1"
             />
-            <NotebookGrid />
+            <NotasCornellGrid />
           </div>
           <div className="col-2">
             <HeadingQuantity
@@ -66,4 +66,4 @@ class Dashboard extends Component {
     );
   }
 }
-export default Dashboard;
+export default Home;

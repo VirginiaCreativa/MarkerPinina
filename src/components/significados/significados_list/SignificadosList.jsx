@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import PalabraItem from './palabra_item/PalabraItem';
+import SignificadoItem from './significado_item/SignificadoItem';
 import Spinner from '../../common/spinner/Spinner';
 
 class PalabrasLists extends Component {
@@ -37,7 +37,7 @@ class PalabrasLists extends Component {
       palabrasLoad = (
         <>
           {palabras.map(palabra => (
-            <PalabraItem key={palabra.id} {...palabra} />
+            <SignificadoItem key={palabra.id} {...palabra} />
           ))}
         </>
       );

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import NotebookItem from './notebook_item/NotebookItem';
+import NotacornellaItem from './notacornell_item/NotacornellaItem';
 import Spinner from '../../common/spinner/Spinner';
 
 class NotebookGrid extends Component {
@@ -38,7 +38,7 @@ class NotebookGrid extends Component {
       notebooksLoad = (
         <>
           {notebooks.map(note => (
-            <NotebookItem key={note.id} {...note} />
+            <NotacornellaItem key={note.id} {...note} />
           ))}
         </>
       );

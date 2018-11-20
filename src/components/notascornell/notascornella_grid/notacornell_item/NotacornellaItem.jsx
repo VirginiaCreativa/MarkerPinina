@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './NotebookItem.scss';
+import classes from './NotacornellaItem.scss';
 import Date from '../../../common/date/Date';
 
 const NotebookItem = ({ title, content, date, images, categorias }) => {

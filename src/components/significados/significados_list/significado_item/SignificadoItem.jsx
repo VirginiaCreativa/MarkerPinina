@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './PalabraItem.scss';
+import classes from './SignificadoItem.scss';
 
 const PalabraItem = ({ title, abrev, contentPrim, phrasesPrim, sinonimos }) => (
   <>
