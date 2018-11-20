@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable no-return-assign */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
@@ -13,12 +11,12 @@ class UserProfile extends Component {
 
   componentDidMount() {
     document.addEventListener('mousemove', this.handleHideMenu);
-    this.fadeMenu.addEventListener('animationend', this.handleShowMenu);
+    this.fadeMenu.addEventListener('animationend', this.handleHideMenu);
   }
 
   componentWillUnmount() {
     document.removeEventListener('mousemove', this.handleHideMenu);
-    this.fadeMenu.removeEventListener('animationend', this.handleShowMenu);
+    this.fadeMenu.removeEventListener('animationstart', this.handleShowMenu);
   }
 
   handleShowMenu = () => {
@@ -32,7 +30,10 @@ class UserProfile extends Component {
     const xClose = e.offsetX;
     const yClose = e.offsetY;
     if (xClose >= '1200' || yClose >= '80') {
-      this.setState({ isMenu: false });
+      this.setState({
+        isMenu: false,
+        fade: false,
+      });
     }
   };
 
@@ -47,7 +48,6 @@ class UserProfile extends Component {
             classes.isMenuOpen,
             fade ? classes.FadeOn : classes.FadeOff,
           ].join(' ')}
-          ref={a => (this.fadeMenu = a)}
         >
           <div className={classes.Triangule} />
           <ul>
