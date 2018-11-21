@@ -7,7 +7,7 @@ module.exports = {
     index: path.resolve(__dirname, '../', 'src/index.jsx'),
     config: path.resolve(__dirname, '../', 'src/config/config.js'),
     hmr:
-      'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=10000&reload=true',
+      'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true',
   },
   templatePath: path.resolve(__dirname, '../', 'src/index.html'),
   imagesFolder: 'images',

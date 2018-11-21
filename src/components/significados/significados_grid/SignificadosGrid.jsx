@@ -1,45 +1,49 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import PalabraItem from './palabra_item/PalabraItem';
+import SignificadoItem from './siginificado_item/SignificadoItem';
 import Spinner from '../../common/spinner/Spinner';
 
-class PalabrasGrid extends Component {
+class SignificadosGrid extends Component {
   state = {
-    palabras: [],
+    significados: [],
+    videoLoading: false,
     loading: true,
   };
 
   componentDidMount() {
-    setTimeout(() => {
-      axios
-        .get('/significados')
-        .then(response => {
-          this.setState({
-            palabras: response.data,
-            loading: false,
-          });
-        })
-        .catch(error => {
-          console.log(error);
-          this.setState({ loading: true });
+    axios
+      .get('/significados')
+      .then(response => {
+        this.setState({
+          significados: response.data,
+          videoLoading: true,
+          loading: false,
         });
-    }, 4000);
+      })
+      .catch(error => {
+        console.log(error);
+        this.setState({ loading: true });
+      });
   }
 
   render() {
-    const { palabras, loading } = this.state;
+    const { significados, loading, videoLoading } = this.state;
 
-    let palabrasLoad = <Spinner />;
+    let significadosLoad = <Spinner />;
     let loadingSpinner = null;
 
     if (loading) {
       loadingSpinner = <Spinner />;
     }
-    if (palabras) {
-      palabrasLoad = (
+    if (significados) {
+      significadosLoad = (
         <>
-          {palabras.map(palabra => (
-            <PalabraItem key={palabra.id} {...palabra} />
+          {significados.map(sig => (
+            <SignificadoItem
+              key={sig.id}
+              {...sig}
+              VideoLoading={videoLoading}
+            />
           ))}
         </>
       );
@@ -47,9 +51,9 @@ class PalabrasGrid extends Component {
     return (
       <>
         {loadingSpinner}
-        {palabrasLoad}
+        {significadosLoad}
       </>
     );
   }
 }
-export default PalabrasGrid;
+export default SignificadosGrid;

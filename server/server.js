@@ -23,18 +23,17 @@ app.use(express.static(paths.outputPath));
 app.use(bodyParser.json());
 
 app.use(
-  hotmiddleware(compiler, {
-    log: console.log,
-    path: '/__webpack_hmr',
-    heartbeat: 10 * 1000,
-    reload: true,
+  middleware(compiler, {
+    noInfo: true,
+    publicPath: webpackConfig.dev,
   }),
 );
 
 app.use(
-  middleware(compiler, {
-    noInfo: true,
-    publicPath: webpackConfig.dev,
+  hotmiddleware(compiler, {
+    log: false,
+    path: '/__webpack_hmr',
+    heartbeat: 2000,
   }),
 );
 
@@ -49,5 +48,5 @@ app.use('/', router);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
-  console.log('Listening 3000');
+  console.log('Listening 8000');
 });

@@ -45,11 +45,16 @@ module.exports = {
   devServer: {
     contentBase: commonPaths.outputPath,
     watchContentBase: true,
+    noInfo: true,
     compress: true,
     hot: true,
+    inline: true,
     stats: {
       colors: true,
     },
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  plugins: [
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+  ],
 };

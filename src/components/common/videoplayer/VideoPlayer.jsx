@@ -1,72 +1,60 @@
 /* eslint-disable no-return-assign */
 import React, { Component } from 'react';
-import axios from 'axios';
 import VideoPlayerLayout from './layout/VideoPlayerLayout';
 import Spinner from '../spinner/Spinner';
 import Video from './video/Video';
 
 class VideoPlayer extends Component {
   state = {
-    video: false,
-    loading: true,
-    play: true,
+    play: false,
   };
 
   componentDidMount() {
-    axios
-      .get('/significados')
-      .then(response => {
-        this.setState({
-          video: true,
-          loading: false,
-        });
-      })
-      .catch(error => {
-        console.log(error);
-        this.setState({ loading: true });
-      });
+    const { play } = this.state;
+    this.setState({ play: !play });
   }
 
   handlerTogglePlay = () => {
-    this.videoPalabraRef.play();
+    this.VideoRef.play();
+    const { play } = this.state;
     this.setState({
-      play: false,
+      play: !play,
     });
   };
 
   handlerToggleOut = () => {
-    this.videoPalabraRef.pause();
-    this.videoPalabraRef.currentTime = 0;
+    this.VideoRef.pause();
+    this.VideoRef.currentTime = 0;
+    const { play } = this.state;
     this.setState({
-      play: true,
+      play: !play,
     });
   };
 
+  handleTimeUpdate = () => {
+    console.log('HGolaaa');
+  };
+
   render() {
-    const { video, loading, pause, play } = this.state;
-    const { srcVideo } = this.props;
+    const { pause, play } = this.state;
+    const { srcVideo, VideoLoading } = this.props;
 
-    const videoPlayerShow = (
-      <Video
-        paused={pause}
-        played={play}
-        srcVideo={srcVideo}
-        videoPalabraRef={v => (this.videoPalabraRef = v)}
-        clickedOver={this.handlerTogglePlay}
-        clickedOut={this.handlerToggleOut}
-      />
-    );
-    let loadingSpinner = null;
-
-    if (loading) {
-      loadingSpinner = <Spinner />;
+    let videoPlayerShow = <Spinner />;
+    if (VideoLoading) {
+      videoPlayerShow = (
+        <Video
+          paused={pause}
+          played={play}
+          srcVideo={srcVideo}
+          videoRef={v => (this.VideoRef = v)}
+          clickedOver={this.handlerTogglePlay}
+          clickedOut={this.handlerToggleOut}
+          onTimeUpdate={this.handleTimeUpdate}
+        />
+      );
     }
 
-    return (
-      <VideoPlayerLayout>
-        {video ? videoPlayerShow : loadingSpinner}
-      </VideoPlayerLayout>
-    );
+    return <VideoPlayerLayout>{videoPlayerShow}</VideoPlayerLayout>;
   }
 }
 export default VideoPlayer;

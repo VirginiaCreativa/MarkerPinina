@@ -8,7 +8,8 @@ const Video = ({
   clickedOver,
   clickedOut,
   played,
-  videoPalabraRef,
+  videoRef,
+  onTimeUpdate,
 }) => (
   <>
     <div className={classes.Video}>
@@ -17,10 +18,11 @@ const Video = ({
       </div>
       <video
         src={srcVideo}
-        ref={videoPalabraRef}
+        ref={videoRef}
         className="img-fluid"
         onMouseOver={clickedOver}
         onMouseOut={clickedOut}
+        onTimeUpdate={onTimeUpdate}
       />
     </div>
   </>
