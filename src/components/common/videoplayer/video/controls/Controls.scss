@@ -27,14 +27,17 @@
   display: block;
   bottom: 0;
   width: 100%;
+  transition: all 0.3s ease-in;
   .ProgressBar,
   .ProgressFilled {
     height: 6px;
     position: absolute;
+    transition: all 0.3s ease-in;
     bottom: 0;
   }
   .ProgressBar {
-    background-color: $write_gray_3;
+    background-color: $blue;
+    transition: all 0.3s ease-in;
     z-index: 2;
   }
   .ProgressFilled {
