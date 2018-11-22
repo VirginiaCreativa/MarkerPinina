@@ -1,6 +1,12 @@
 .Controls {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
   button {
     cursor: pointer;
+    z-index: 999;
     border: none;
     background-color: transparent;
     :global {
@@ -9,5 +15,25 @@
         font-size: 60px;
       }
     }
+  }
+}
+.Progress {
+  display: block;
+  bottom: 0;
+  width: 100%;
+  .ProgressBar,
+  .ProgressFilled {
+    height: 6px;
+    position: absolute;
+    bottom: 0;
+  }
+  .ProgressBar {
+    background-color: $write_gray_3;
+    z-index: 2;
+  }
+  .ProgressFilled {
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    width: 100%;
+    z-index: 1;
   }
 }

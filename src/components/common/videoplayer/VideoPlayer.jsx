@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-state */
 /* eslint-disable no-return-assign */
 import React, { Component } from 'react';
 import VideoPlayerLayout from './layout/VideoPlayerLayout';
@@ -6,20 +7,23 @@ import Video from './video/Video';
 
 class VideoPlayer extends Component {
   state = {
-    play: false,
+    play: true,
+    currentTime: 0,
+    duration: 0,
   };
 
-  componentDidMount() {
-    const { play } = this.state;
-    this.setState({ play: !play });
-  }
-
   handlerTogglePlay = () => {
-    this.VideoRef.play();
-    const { play } = this.state;
-    this.setState({
-      play: !play,
-    });
+    const promise = this.VideoRef.play();
+
+    if (promise !== undefined) {
+      promise
+        .then(_ => {
+          this.setState({ play: false });
+        })
+        .catch(error => {
+          this.setState({ play: true });
+        });
+    }
   };
 
   handlerToggleOut = () => {
@@ -27,18 +31,23 @@ class VideoPlayer extends Component {
     this.VideoRef.currentTime = 0;
     const { play } = this.state;
     this.setState({
-      play: !play,
+      play: true,
     });
   };
 
-  handleTimeUpdate = () => {
-    console.log('HGolaaa');
+  handleDuration = e => {
+    console.log(e);
+  };
+
+  handleTimeUpdate = e => {
+    this.VideoRef = e.target;
+    console.log(this.VideoRef);
+    this.setState({ currentTime: this.VideoRef.currentTime });
   };
 
   render() {
-    const { pause, play } = this.state;
+    const { pause, play, currentTime, duration } = this.state;
     const { srcVideo, VideoLoading } = this.props;
-
     let videoPlayerShow = <Spinner />;
     if (VideoLoading) {
       videoPlayerShow = (
@@ -50,6 +59,10 @@ class VideoPlayer extends Component {
           clickedOver={this.handlerTogglePlay}
           clickedOut={this.handlerToggleOut}
           onTimeUpdate={this.handleTimeUpdate}
+          // onLoadedMetadata={this.handleLoadMeta}
+          currentTime={currentTime}
+          isDuration={duration}
+          onDurationChange={this.handleDuration}
         />
       );
     }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import classes from './SignificadoItem.scss';
-import Spinner from '../../../common/spinner/Spinner';
 import VideoPlayer from '../../../common/videoplayer/VideoPlayer';
 
 class SignificadoItem extends Component {

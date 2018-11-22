@@ -10,11 +10,16 @@ const Video = ({
   played,
   videoRef,
   onTimeUpdate,
+  currentTime,
 }) => (
   <>
     <div className={classes.Video}>
       <div className={classes.ControlsVideo}>
-        <Controls clickedOver={clickedOver} played={played} />
+        <Controls
+          clickedOver={clickedOver}
+          played={played}
+          currentTime={currentTime}
+        />
       </div>
       <video
         src={srcVideo}
