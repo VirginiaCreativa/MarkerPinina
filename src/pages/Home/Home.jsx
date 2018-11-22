@@ -7,7 +7,7 @@ import NotasCornellGrid from '../../components/notascornell/notascornella_grid/N
 
 class Home extends Component {
   state = {
-    switcher: false,
+    switcher: true,
   };
 
   handleSwitcherList = () => {

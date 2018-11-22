@@ -16,25 +16,9 @@ class Video extends Component {
     this.setState({ played: !this.props.autoplay });
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   if (nextProps.played !== this.props.played) {
-  //     this.togglePlay();
-  //   }
-  // }
-
   setRef = element => {
     this.video = element;
   };
-
-  // togglePlay = () => {
-  //   const { played } = this.props.played;
-  //   if (played) {
-  //     this.video.play();
-  //   } else {
-  //     this.video.pause();
-  //     this.video.currentTime = 0;
-  //   }
-  // };
 
   handleTimeUpdate = e => {
     console.log(this.video.currentTime);
