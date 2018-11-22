@@ -5,7 +5,7 @@ import Spinner from '../../common/spinner/Spinner';
 
 class PalabrasLists extends Component {
   state = {
-    palabras: [],
+    significados: [],
     loading: false,
   };
 
@@ -14,7 +14,7 @@ class PalabrasLists extends Component {
       .get('/significados')
       .then(response => {
         this.setState({
-          palabras: response.data,
+          significados: response.data,
           loading: false,
         });
       })
@@ -25,19 +25,19 @@ class PalabrasLists extends Component {
   }
 
   render() {
-    const { palabras, loading } = this.state;
+    const { significados, loading } = this.state;
 
-    let palabrasLoad = <Spinner />;
+    let significadosLoad = <Spinner />;
     let loadingSpinner = null;
 
     if (loading) {
       loadingSpinner = <Spinner />;
     }
-    if (palabras) {
-      palabrasLoad = (
+    if (significados) {
+      significadosLoad = (
         <>
-          {palabras.map(palabra => (
-            <SignificadoItem key={palabra.id} {...palabra} />
+          {significados.map(sign => (
+            <SignificadoItem key={sign.id} {...sign} imagen={sign.images[0]} />
           ))}
         </>
       );
@@ -45,7 +45,7 @@ class PalabrasLists extends Component {
     return (
       <>
         {loadingSpinner}
-        {palabrasLoad}
+        {significadosLoad}
       </>
     );
   }

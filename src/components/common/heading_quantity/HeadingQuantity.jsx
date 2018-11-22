@@ -9,12 +9,12 @@ const HeadingQuantity = ({ quantited, title, colored }) => {
   return (
     <>
       <div className={classes.HeadingQuantity}>
-        <h6>
+        <h5>
           {title}
           <span className={classes.cantCard} style={colorSelect}>
             {quantited}
           </span>
-        </h6>
+        </h5>
       </div>
     </>
   );

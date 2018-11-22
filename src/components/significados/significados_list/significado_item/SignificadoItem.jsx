@@ -1,23 +1,20 @@
 import React from 'react';
 import classes from './SignificadoItem.scss';
 
-const PalabraItem = ({ title, abrev, contentPrim, phrasesPrim, sinonimos }) => (
+const SignificadoItem = ({ title, abrev, contentPrim, sinonimos, imagen }) => (
   <>
-    <div className={classes.PalabraItem}>
+    <div className={classes.SignificadoItem}>
       <div className={classes.Grid}>
-        <i className="bx bx-pin" />
+        <div className={classes.Img}>
+          <img src={imagen} alt={title} />
+        </div>
       </div>
       <div className={classes.Grid}>
-        <h4>
+        <h5>
           {title}
           <span className={classes.Abrev}>{abrev}</span>
-        </h4>
+        </h5>
         <p className={classes.Content}>{contentPrim}</p>
-        <p className={classes.Phrases}>
-          &ldquo;
-          {phrasesPrim}
-          &rdquo;
-        </p>
         <ul className={classes.Sinonimos}>
           {sinonimos.map(sinom => (
             <li key={sinom}>{sinom}</li>
@@ -28,4 +25,4 @@ const PalabraItem = ({ title, abrev, contentPrim, phrasesPrim, sinonimos }) => (
   </>
 );
 
-export default PalabraItem;
+export default SignificadoItem;
