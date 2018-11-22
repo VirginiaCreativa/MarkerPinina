@@ -16,6 +16,12 @@
       }
     }
   }
+  :global {
+    .bx-error {
+      color: #fff;
+      font-size: 60px;
+    }
+  }
 }
 .Progress {
   display: block;

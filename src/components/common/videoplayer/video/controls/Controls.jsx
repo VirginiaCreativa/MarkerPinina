@@ -2,7 +2,7 @@
 import React from 'react';
 import classes from './Controls.scss';
 
-const Controls = ({ played, currentTime, isDuration }) => {
+const Controls = ({ played, errored, currentTime, isDuration }) => {
   const formattedTime = secs => {
     // const min = parseFloat(secs).toFixed(0);
     const min = Math.round((secs * 100) / 100).toFixed(1);
@@ -24,6 +24,7 @@ const Controls = ({ played, currentTime, isDuration }) => {
             <i className="bx bx-play-circle" />
           </button>
         ) : null}
+        {errored && <i className="bx bx-error" />}
       </div>
       <div className={classes.Progress}>
         <div className={classes.ProgressBar} style={progressClass} />
