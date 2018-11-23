@@ -6,24 +6,27 @@ class SignificadoItem extends Component {
   state = {};
 
   render() {
-    const { title, contentPrim, abrev, video, VideoLoading } = this.props;
+    const {
+      title,
+      contentPrim,
+      abrev,
+      video,
+      VideoLoading,
+      phrasesPrim,
+    } = this.props;
     return (
       <>
         <div className={classes.SignificadoItem}>
           <div className={classes.View}>
             <VideoPlayer srcVideo={video} VideoLoading={VideoLoading} />
           </div>
-          <div className={classes.Grid}>
-            <div>
-              <i className="bx bx-pin" />
-            </div>
-            <div className={classes.Content}>
-              <h4>
-                {title}
-                <span className={classes.Abrev}>{abrev}</span>
-              </h4>
-              <p>{contentPrim}</p>
-            </div>
+          <div className={classes.Content}>
+            <h5>
+              {title}
+              <span className={[classes.Abrev, 'tag'].join(' ')}>{abrev}</span>
+            </h5>
+            <p>{contentPrim}</p>
+            <p className={classes.Phrases}>{phrasesPrim}</p>
           </div>
         </div>
       </>

@@ -21,7 +21,6 @@ class Video extends Component {
   };
 
   handleTimeUpdate = e => {
-    console.log(this.video.currentTime);
     this.setState({ currentTimeNumber: this.video.currentTime });
   };
 
