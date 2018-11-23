@@ -25,7 +25,7 @@ const Sidebar = () => (
       <i className="bx bx-detail" />
     </NavLink>
     <NavLink to="/foros" activeClassName="selected" className="linkActive">
-      <i className="bx bx-message-detail" />
+      <i className="bx bx-message-rounded" />
     </NavLink>
   </div>
 );

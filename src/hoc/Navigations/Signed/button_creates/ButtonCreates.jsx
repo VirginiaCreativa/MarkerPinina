@@ -62,9 +62,9 @@ class ButtonCreates extends Component {
               </Link>
             </li>
             <li>
-              <Link to="/taduccion">
-                <i className="bx bx-transfer" />
-                Traduccion
+              <Link to="/documentos">
+                <i className="bx bx-detail" />
+                Doucmentos
               </Link>
             </li>
           </ul>
