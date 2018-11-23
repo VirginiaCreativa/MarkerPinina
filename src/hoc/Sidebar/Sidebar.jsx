@@ -21,8 +21,8 @@ const Sidebar = () => (
     >
       <i className="bx bx-book-bookmark" />
     </NavLink>
-    <NavLink to="/traduccion" activeClassName="selected" className="linkActive">
-      <i className="bx bx-transfer" />
+    <NavLink to="/documentos" activeClassName="selected" className="linkActive">
+      <i className="bx bx-detail" />
     </NavLink>
     <NavLink to="/foros" activeClassName="selected" className="linkActive">
       <i className="bx bx-message-detail" />

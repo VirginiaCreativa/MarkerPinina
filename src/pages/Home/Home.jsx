@@ -56,7 +56,7 @@ class Home extends Component {
           </div>
           <div className="col-2">
             <HeadingQuantity
-              title="Traducción"
+              title="Documentos"
               quantited="3"
               colored="#3a3b98"
             />

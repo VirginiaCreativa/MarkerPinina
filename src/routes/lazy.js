@@ -16,8 +16,8 @@ export const NotasCornell = Loadable({
   loading: Spinner,
 });
 
-export const Traduccion = Loadable({
-  loader: () => import('../pages/Traduccion'),
+export const Documentos = Loadable({
+  loader: () => import('../pages/Documentos'),
   loading: Spinner,
 });
 

@@ -6,7 +6,7 @@ import {
   Home,
   Significados,
   NotasCornell,
-  Traduccion,
+  Documentos,
   Foros,
   NotFound,
 } from './lazy';
@@ -20,7 +20,7 @@ class Router extends Component {
         <Switch>
           <Route path="/foros" component={Foros} />
           <Route path="/significados" component={Significados} />
-          <Route path="/traduccion" component={Traduccion} />
+          <Route path="/documentos" component={Documentos} />
           <Route path="/notascornell" component={NotasCornell} />
           <Route path="/" exact component={Home} />
           <Route path="/*" component={NotFound} />
