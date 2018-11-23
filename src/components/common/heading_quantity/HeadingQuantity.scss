@@ -1,19 +1,18 @@
 .HeadingQuantity {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   h5 {
     display: inline-block;
-    font-weight: 700;
   }
   .cantCard {
     font-size: 14px;
     background-color: $blue;
     color: #fff;
     border-radius: 100%;
-    height: 28px;
-    width: 28px;
+    height: 24px;
+    width: 24px;
     display: inline-block;
     text-align: center;
-    line-height: 2;
+    line-height: 1.8;
     margin-left: 6px;
   }
 }
