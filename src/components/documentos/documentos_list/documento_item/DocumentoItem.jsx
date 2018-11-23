@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './DocumentoItem.scss';
 import { CURRENT_MESES } from '../../../../config/date';
 
-const DocumentoItem = ({ title, etiqueta, date }) => (
+const DocumentoItem = ({ title, etiquetas, date }) => (
   <>
     <div className={classes.DocumentoItem}>
       <div className={classes.Wrapper}>
@@ -11,8 +11,8 @@ const DocumentoItem = ({ title, etiqueta, date }) => (
           <i className="bx bx-calendar" />
           {CURRENT_MESES || date}
         </p>
-        <ul>
-          {etiqueta.map(etq => (
+        <ul className={classes.Etiquetas}>
+          {etiquetas.map(etq => (
             <li key={etq}>{etq}</li>
           ))}
         </ul>

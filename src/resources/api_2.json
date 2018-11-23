@@ -96,42 +96,42 @@
   [
     {
       "id": 1,
-      "etiqueta": ["Filosofía", "Prof. Max", "Taller"],
+      "etiquetas": ["Filosofía", "Prof. Max", "Taller"],
       "content": "Aristóteles considera que el fin que busca el hombre es la felicidad, que consiste en la vida contemplativa. La ética desemboca en la política. Aristóteles concibe al Estado como una comunidad de iguales que aspira a la mejor vida posible; una especie de ser natural que no surge como fruto de un pacto o acuerdo, sino que tiene sus raíces en la naturaleza de las cosas. El hombre es un animal social («zoon politikon») que desarrolla sus fines en el seno de una comunidad. La política del hombre se explica por su capacidad del lenguaje, único instrumento capaz de crear una memoria colectiva y un conjunto de leyes que diferencia lo permitido de lo prohibido.",
       "title": "Filosofía política",
       "video": "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/palabras%2Fimplicar.mp4?alt=media&token=f3b6e8a5-44a4-400f-af7a-bc76da6073af"
     },
     {
       "id": 2,
-      "etiqueta": ["Filosofía", "Prof. Max", "Taller"],
+      "etiquetas": ["Filosofía", "Prof. Max", "Taller"],
       "content": "Aristóteles en un fresco ubicado en Roma por Ludwig Seitz. Cabe resaltar que Aristóteles escribió dos tipos de textos: los destinados a la« publicación» fuera del Liceo o exotéricos(gr.exo 'fuera') y los utilizados como apuntes de clase o notas de conferencias, denominados esotéricos(gr.eso 'dentro').Lamentablemente, solo conservamos los esotéricos, los cuales al ser una recopilación de sus apuntes, vuelven un poco complicada su lectura, pues faltan las explicaciones, las transiciones son abruptas, los argumentos quedan en ocasiones inacabados...leer a Aristóteles es duro, lo que explica en parte que sus textos hayan sido interpretados y comentados a lo largo de dos mil años.",
       "title": "Transmisión y problemas textuales",
       "video": "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/palabras%2Fimplicar.mp4?alt=media&token=f3b6e8a5-44a4-400f-af7a-bc76da6073af"
     },
     {
       "id": 3,
-      "etiqueta": ["Economía", "Prof. Ivana", "Taller"],
+      "etiquetas": ["Economía", "Prof. Ivana", "Taller"],
       "content": "Es importante entender que por el tamaño de la economía de México, por desgracia no podemos hacer mucho para revertir lo que esta sucediendo a nivel mundial. Como país somos insignificantes para el problema mundial. Sin embargo el impacto de lo que pasa nos afecta. Por más que algunos políticos pueden echarle la culpa al gobierno actual, es solo propaganda política ya que el gobierno esta actuando de la mejor manera posible.",
       "title": "Recomendaciones para la crisis ecónomica",
       "video": "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/palabras%2Fimplicar.mp4?alt=media&token=f3b6e8a5-44a4-400f-af7a-bc76da6073af"
     },
     {
       "id": 4,
-      "etiqueta": ["Reactjs", "Consejo", "Blog"],
+      "etiquetas": ["Reactjs", "Consejo", "Blog"],
       "content": "Si hiciste una aplicación medianamente grande con React.js seguramente tuviste que configurar Babel, Webpack, un linter (ESLint?), un servidor de render, etc, etc., y de seguro sufriste la conocida Fatiga de JavaScript. Next.js es un pequeño framework construido sobre React.js que viene a ayudar a reducir esta fatiga.¿Cómo ? Next nos permite, instalando una sola dependencia, tener configurado todo lo que necesitamos para crear una aplicación de React usando Babel, Webpack, server render y muchas otras técnicas como HMR o separación de código y…¡ hasta hace más fácil hacer deploy de nuestras aplicaciones!",
       "title": "El futuro de las aplicaciones con React",
       "video": "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/palabras%2Fimplicar.mp4?alt=media&token=f3b6e8a5-44a4-400f-af7a-bc76da6073af"
     },
     {
       "id": 5,
-      "etiqueta": ["Consejo", "Aprendizaje", "Blog"],
+      "etiquetas": ["Consejo", "Aprendizaje", "Blog"],
       "content": "Si hiciste una aplicación medianamente grande con React.js seguramente tuviste que configurar Babel, Webpack, un linter (ESLint?), un servidor de render, etc, etc., y de seguro sufriste la conocida Fatiga de JavaScript. Next.js es un pequeño framework construido sobre React.js que viene a ayudar a reducir esta fatiga.¿Cómo ? Next nos permite, instalando una sola dependencia, tener configurado todo lo que necesitamos para crear una aplicación de React usando Babel, Webpack, server render y muchas otras técnicas como HMR o separación de código y…¡ hasta hace más fácil hacer deploy de nuestras aplicaciones!",
       "title": "Cómo aprender lo que sea y crear equipos imparables",
       "video": "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/palabras%2Fimplicar.mp4?alt=media&token=f3b6e8a5-44a4-400f-af7a-bc76da6073af"
     },
     {
       "id": 6,
-      "etiqueta": ["Firebase", "Definición", "Blog"],
+      "etiquetas": ["Firebase", "Definición", "Blog"],
       "content": "Cuando trabajes con Firebase la mayoría del tiempo tendrás dos cosas en común, una va a ser datos “real time” y usuarios que acceden a estos datos a través de una aplicación. En la industria profesional es muy común manejar niveles de acceso para usuarios, es decir, algunos tendrán mayor acceso preferencial a cierta información que otros.",
       "title": "Aprende Firebase en un minuto",
       "video": "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/palabras%2Fimplicar.mp4?alt=media&token=f3b6e8a5-44a4-400f-af7a-bc76da6073af"
