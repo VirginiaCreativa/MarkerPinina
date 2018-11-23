@@ -4,6 +4,7 @@ import HeadingQuantity from '../../components/common/heading_quantity/HeadingQua
 import SignificadosList from '../../components/significados/significados_list/SignificadosList';
 import SignificadosGrid from '../../components/significados/significados_grid/SignificadosGrid';
 import NotasCornellGrid from '../../components/notascornell/notascornella_grid/NotascornellaGrid';
+import DocumentosLists from '../../components/documentos/documentos_list/DocumentosLists';
 
 class Home extends Component {
   state = {
@@ -24,7 +25,7 @@ class Home extends Component {
     return (
       <>
         <div className="row">
-          <div className="col-5">
+          <div className="col">
             <div className="row">
               <div className="col">
                 <HeadingQuantity
@@ -46,7 +47,7 @@ class Home extends Component {
             </div>
             <div>{switcher ? <SignificadosList /> : <SignificadosGrid />}</div>
           </div>
-          <div className="col-5">
+          <div className="col">
             <HeadingQuantity
               title="Notas Cornell"
               quantited="6"
@@ -54,12 +55,13 @@ class Home extends Component {
             />
             <NotasCornellGrid />
           </div>
-          <div className="col-2">
+          <div className="col">
             <HeadingQuantity
               title="Documentos"
               quantited="3"
               colored="#3a3b98"
             />
+            <DocumentosLists />
           </div>
         </div>
       </>

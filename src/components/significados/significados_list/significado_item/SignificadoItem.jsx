@@ -1,12 +1,12 @@
 import React from 'react';
 import classes from './SignificadoItem.scss';
 
-const SignificadoItem = ({ title, abrev, contentPrim, sinonimos, imagen }) => (
+const SignificadoItem = ({ title, abrev, contentPrim, sinonimos, images }) => (
   <>
     <div className={classes.SignificadoItem}>
       <div className={classes.Grid}>
         <div className={classes.Img}>
-          <img src={imagen} alt={title} />
+          <img src={images} alt={title} />
         </div>
       </div>
       <div className={classes.Grid}>

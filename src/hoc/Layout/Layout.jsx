@@ -9,7 +9,7 @@ const layout = ({ children }) => (
       <Header />
       <Sidebar />
       <div className={classes.Wrapper}>
-        <div className="container">{children}</div>
+        <div className="container-fluid">{children}</div>
       </div>
     </div>
   </>

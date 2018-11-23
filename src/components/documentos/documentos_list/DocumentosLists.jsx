@@ -1,44 +1,45 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import SignificadoItem from './significado_item/SignificadoItem';
+import DocumentItem from './documento_item/DocumentoItem';
 import Spinner from '../../common/spinner/Spinner';
 
-class SignificadosList extends Component {
+class DocumentosLists extends Component {
   state = {
-    significados: [],
+    documentos: [],
     loading: true,
   };
 
   componentDidMount() {
     axios
-      .get('/significados')
+      .get('/documentos')
       .then(response => {
         this.setState({
-          significados: response.data,
+          documentos: response.data,
           loading: false,
         });
       })
       .catch(error => {
         console.log(error);
-        this.setState({ loading: true });
+        this.setState({
+          loading: true,
+        });
       });
   }
 
   render() {
-    const { significados, loading } = this.state;
-
-    let significadosLoad = <Spinner />;
+    const { documentos, loading } = this.state;
+    let documentosLoad = <Spinner />;
     let loadingSpinner = null;
 
     if (loading) {
       loadingSpinner = <Spinner />;
     }
 
-    if (significados) {
-      significadosLoad = (
+    if (documentos) {
+      documentosLoad = (
         <>
-          {significados.map(sign => (
-            <SignificadoItem key={sign.id} {...sign} images={sign.images[0]} />
+          {documentos.map(doc => (
+            <DocumentItem key={doc.id} {...doc} />
           ))}
         </>
       );
@@ -46,9 +47,9 @@ class SignificadosList extends Component {
     return (
       <>
         {loadingSpinner}
-        {significadosLoad}
+        {documentosLoad}
       </>
     );
   }
 }
-export default SignificadosList;
+export default DocumentosLists;
