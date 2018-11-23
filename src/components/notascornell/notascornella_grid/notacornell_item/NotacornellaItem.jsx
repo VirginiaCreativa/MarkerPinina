@@ -20,7 +20,7 @@ const NotebookItem = ({ title, content, date, images, categorias }) => {
             </div>
             <div className="col">
               <div className={classes.Categoria}>
-                <p>{categorias}</p>
+                <p className="tag">{categorias}</p>
               </div>
             </div>
           </div>

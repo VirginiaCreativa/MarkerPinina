@@ -12,7 +12,7 @@ const SignificadoItem = ({ title, abrev, contentPrim, sinonimos, imagen }) => (
       <div className={classes.Grid}>
         <h5>
           {title}
-          <span className={classes.Abrev}>{abrev}</span>
+          <span className={[classes.Abrev, 'tag'].join(' ')}>{abrev}</span>
         </h5>
         <p className={classes.Content}>{contentPrim}</p>
         <ul className={classes.Sinonimos}>

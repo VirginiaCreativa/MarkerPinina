@@ -29,15 +29,10 @@
   .Categoria {
     display: flex;
     justify-content: flex-end;
-    p {
-      display: block;
-      background-color: #e3f6fa;
-      color: $blue;
-      padding: 0 6px;
-      border-radius: 2px;
-      font-weight: 700;
-      font-size: 12px;
-      margin-bottom: 0 !important;
+    :global {
+      .tag {
+        padding: 0 6px !important;
+      }
     }
     
   }

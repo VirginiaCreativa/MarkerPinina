@@ -106,3 +106,14 @@ section {
     opacity: 0.5;
   }
 }
+:global {
+  .tag {
+    font-weight: 700;
+    font-size: 12px;
+    border-radius: 2px;
+    background-color: #e5f3ff;
+    color: #2a85fe;
+    padding: 0px 4px;
+    margin-bottom: 0 !important;
+  }
+}
