@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { database } from '../../../config/firebase';
 import Spinner from '../../common/spinner/Spinner';
+import classes from './SignificadosDetails.scss';
 import HeadignDetails from './heading_details/HeadingDetails';
 import ContentDetails from './contents_details/ContentDetails';
+import ImagesDetails from './images_details/ImagesDetails';
 
 class SignificadosDetails extends Component {
   state = {
@@ -38,7 +40,7 @@ class SignificadosDetails extends Component {
     if (loading) return <Spinner />;
 
     return (
-      <>
+      <div className={classes.SignificadosDetails}>
         <HeadignDetails
           title={significados.title}
           abrev={significados.abrev}
@@ -46,18 +48,28 @@ class SignificadosDetails extends Component {
         />
         <div className="row">
           <div className="col">
-            <ContentDetails
-              contentPrim={significados.contentPrim}
-              contentSecu={significados.contentSecu}
-              phrasesPrim={significados.phrasesPrim}
-              phrasesSecu={significados.phrasesSecu}
-            />
+            <div className={classes.BoxItem}>
+              <ContentDetails
+                contentPrim={significados.contentPrim}
+                contentSecu={significados.contentSecu}
+                phrasesPrim={significados.phrasesPrim}
+                phrasesSecu={significados.phrasesSecu}
+              />
+            </div>
+            <div className={classes.BoxItem}>
+              <h4>Imagenes</h4>
+              <ImagesDetails />
+            </div>
+            <div className={classes.BoxItem}>
+              <h4>Grámatica</h4>
+              <ImagesDetails />
+            </div>
           </div>
           <div className="col">
             <h2>Video</h2>
           </div>
         </div>
-      </>
+      </div>
     );
   }
 }

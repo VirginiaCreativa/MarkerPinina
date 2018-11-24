@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 import Home from '../pages/Home/Home';
 import Significados from '../pages/Sigfinicados';
-import SignificadosDetails from '../components/significados/significados_details/significadosDetails';
+import SignificadosDetails from '../components/significados/significados_details/SignificadosDetails';
 import NotasCornell from '../pages/Notascornell';
 import Documentos from '../pages/Documentos';
 import Foros from '../pages/Foros';
