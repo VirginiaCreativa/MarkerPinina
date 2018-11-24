@@ -5,7 +5,6 @@ body {
   padding: 40px 0 0;
 }
 p {
-  font-size: 14px;
   line-height: 24px;
   color: #666;
   word-spacing: 2px;
@@ -116,4 +115,13 @@ section {
     padding: 0px 4px;
     margin-bottom: 0 !important;
   }
+}
+abb,
+acronym {
+  cursor: help;
+  background-color: $blue;
+  color: #fff;
+  font-size: 14px;
+  padding: 4px;
+  border-radius: 2px;
 }

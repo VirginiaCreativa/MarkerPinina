@@ -1,12 +1,13 @@
-/* eslint-disable prefer-destructuring */
-/* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
-import axios from 'axios';
 import { database } from '../../../config/firebase';
+import Spinner from '../../common/spinner/Spinner';
+import HeadignDetails from './heading_details/HeadingDetails';
+import ContentDetails from './contents_details/ContentDetails';
 
 class SignificadosDetails extends Component {
   state = {
     significados: [],
+    loading: true,
   };
 
   componentDidMount() {
@@ -19,9 +20,12 @@ class SignificadosDetails extends Component {
     significadosRef
       .once('value')
       .then(snapshot => {
-        const values = snapshot.val() || {};
-        console.log(values.title);
-        this.setState({ significados: values });
+        const { loading } = this.state;
+        const values = snapshot.val() || loading;
+        this.setState({
+          significados: values,
+          loading: false,
+        });
       })
       .catch(error => {
         console.log(error);
@@ -29,13 +33,31 @@ class SignificadosDetails extends Component {
   }
 
   render() {
-    const { significados } = this.state;
+    const { significados, loading } = this.state;
+
+    if (loading) return <Spinner />;
+
     return (
-      <div>
-        <h3>REDAT</h3>
-        <h1>{significados.title}</h1>
-        <h3>ID: {this.props.match.params.id}</h3>
-      </div>
+      <>
+        <HeadignDetails
+          title={significados.title}
+          abrev={significados.abrev}
+          abreviatura={significados.abreviatura}
+        />
+        <div className="row">
+          <div className="col">
+            <ContentDetails
+              contentPrim={significados.contentPrim}
+              contentSecu={significados.contentSecu}
+              phrasesPrim={significados.phrasesPrim}
+              phrasesSecu={significados.phrasesSecu}
+            />
+          </div>
+          <div className="col">
+            <h2>Video</h2>
+          </div>
+        </div>
+      </>
     );
   }
 }

@@ -72,6 +72,8 @@
     "jsx-a11y/media-has-caption": 0,
     "jsx-a11y/mouse-events-have-key-events": 0,
     "no-unused-vars": 0,
+    "react/destructuring-assignment": 0,
+    "prefer-destructuring": 0
   },
   "env": {
     "es6": true,
