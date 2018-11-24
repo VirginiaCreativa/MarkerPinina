@@ -1,3 +1,11 @@
+a {
+  transition: all 0.3s ease-in;
+  &:hover {
+    .SignificadoItem {
+      transform: scale(1.02);
+    }
+  } 
+}
 .SignificadoItem {
   background-color: #fff;
   border-left: 3px solid #ff6b6b;
@@ -8,6 +16,7 @@
   display: grid;
   grid-template-columns: 180px auto;
   grid-gap: 20px;
+  transition: all 0.3s ease-in;
   h5 {
     display: block;
   }

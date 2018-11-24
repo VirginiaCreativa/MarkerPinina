@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { withRouter } from 'react-router-dom';
+import { database } from '../../../config/firebase';
 import SignificadoItem from './significado_item/SignificadoItem';
 import Spinner from '../../common/spinner/Spinner';
 
@@ -38,7 +40,12 @@ class SignificadosList extends Component {
       significadosLoad = (
         <>
           {significados.map(sign => (
-            <SignificadoItem key={sign.id} {...sign} images={sign.images[0]} />
+            <SignificadoItem
+              key={sign.id}
+              {...sign}
+              images={sign.images[0]}
+              link={'/significadosdetail/' + sign.id}
+            />
           ))}
         </>
       );
@@ -51,4 +58,4 @@ class SignificadosList extends Component {
     );
   }
 }
-export default SignificadosList;
+export default withRouter(SignificadosList);
