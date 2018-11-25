@@ -3,12 +3,12 @@ import classes from './HeadingDetails.scss';
 
 const HeadingDetails = ({ title, abrev, abreviatura }) => (
   <div className={classes.HeadingDetails}>
-    <h1>
+    <h2>
       {title}
       <span title={abreviatura} className={[classes.Abrev, 'tag'].join(' ')}>
         {abrev}
       </span>
-    </h1>
+    </h2>
   </div>
 );
 

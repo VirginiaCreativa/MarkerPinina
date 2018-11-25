@@ -7,6 +7,7 @@ module.exports = {
     filename: '[name].js',
     path: commonPaths.outputPath,
     chunkFilename: '[name].js',
+    // libraryTarget: 'commonjs2',
   },
   module: {
     rules: [
@@ -45,6 +46,7 @@ module.exports = {
   devServer: {
     contentBase: commonPaths.outputPath,
     watchContentBase: true,
+    historyApiFallback: true,
     noInfo: true,
     compress: true,
     hot: true,

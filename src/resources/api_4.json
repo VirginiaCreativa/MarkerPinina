@@ -1,0 +1,180 @@
+{
+  "notascornell" : 
+  [ 
+    {
+      "categorias" : "Redux",
+      "content" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "id" : 1,
+      "images" : "https://www.gitbook.com/share/space/thumbnail/-L5K1I1WsuQMZ8ecEuWg.png",
+      "tag" : [ "reactjs", "fullstack", "redux", "javascript" ],
+      "title" : "Redux Definición"
+    }, {
+      "categorias" : "Redux",
+      "content" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "id" : 2,
+      "images" : "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/notebook%2FADVANCED%20PATTERS.jpg?alt=media&token=173a4489-b717-44d2-bb32-784046ec5717",
+      "tag" : [ "reactjs", "avanzado", "redux", "javascript" ],
+      "title" : "Redux Avanzado"
+    }, {
+      "categorias" : "React",
+      "content" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "id" : 3,
+      "images" : "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/notebook%2FSWITcHER%20GRID%252FLIST.jpg?alt=media&token=2ebafb17-a0fa-4628-8bd6-b3eaf956e673",
+      "tag" : [ "reactjs", "avanzado", "demo", "javascript" ],
+      "title" : "React Switcher"
+    }, {
+      "categorias" : "Grámatica",
+      "content" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "id" : 4,
+      "images" : "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/notebook%2FArticulo_Un_El_.jpg?alt=media&token=5a4b77f4-566d-40e3-a20a-d88390d4157c",
+      "tag" : [ "español", "gramatica", "frases", "ejemplos" ],
+      "title" : "Determinantes"
+    } 
+  ],
+  "significados" : 
+  [ 
+    {
+      "title" : "Implicar",
+      "abrev" : "tr",
+      "abreviatura": "Transitivo",
+      "contentPrim" : "Envolver, enredar a alguien en algo",
+      "contentSecu" : "Contener, llevar en sí, significar.",
+      "id" : 1,
+      "images": ["https://image.shutterstock.com/z/stock-vector-doctor-with-magnifier-and-blood-glucose-testing-meter-diabetes-mellitus-type-diabetes-and-1202862037.jpg", "https://image.shutterstock.com/z/stock-vector-flat-design-illustration-concepts-for-business-analysis-and-planning-consulting-team-work-725949823.jpg", "https://avanzarrhh.files.wordpress.com/2014/06/images.jpg?w=275", "https://image.shutterstock.com/z/stock-photo-word-writing-text-implications-business-concept-for-conclusion-state-of-being-involved-suggestion-1126713692.jpg"],
+      "lsc" : "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/implicar.gif?alt=media&token=b7a63fb5-eea2-44e1-91f5-085b1ca96d55",
+      "lscImage" : "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/implicar.jpg?alt=media&token=e05328ad-b4f8-452f-99f2-bbf7f173b47f",
+      "phrasesPrim" : "Esa prueba le implicaba en el crimen.",
+      "phrasesSecu" : "Su respuesta implicaba reproche",
+      "sinonimos" : [ "meter", "liar", "mezclar", "responsabilizar" ],
+      "video" : "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/palabras%2Fimplicar.mp4?alt=media&token=f3b6e8a5-44a4-400f-af7a-bc76da6073af",
+      "ejemplos": [
+        "Creo que es muy importante implicar a los padres.",
+        "Necesitamos implicar a las personas y convencerlas.",
+        "La simple sospecha puede implicar la detención.",
+        "El silencio del Gobierno parecería implicar que no le interesa mucho arrojar luz sobre el asunto.",
+        "Hemos de implicar a nuestros ciudadanos en Europa."
+      ],
+      "suelenantes": ["podría", "debe", "parece", "pueda", "debería", "suele"],
+      "suelendespues": ["necesariemente", "cambios", "riesgos", "tanto", "costos", "algo"]
+    }, 
+    {
+      "title" : "Concretar",
+      "abrev" : "vb",
+      "abreviatura": "Verbo",
+      "antonimos" : [ "generalizar", "divagar" ],
+      "contentPrim" : "Hacer concreta o precisa alguna cosa",
+      "contentSecu" : "Reducir a lo más esencial",
+      "id" : 2,
+      "images" : [ "data:image/jpeg;base64,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", "data:image/jpeg;base64,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", "https://image.shutterstock.com/image-photo/focused-millennial-african-american-student-450w-1079701271.jpg", "https://image.shutterstock.com/image-photo/female-secretary-holding-notebook-write-450w-791456863.jpg" ],
+      "lsc" : "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/concretar.gif?alt=media&token=50a2e5e5-a35f-4d6e-9768-43df71de3d96",
+      "lscImage" : "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/concretar.jpg?alt=media&token=e31ca21f-eb5b-4863-b6a0-8b14d65f1b30",
+      "phrasesPrim" : "Cuando vamos a hacer un examen, debemos concretarnos a estudiar lo más importante y no perder tiempo en lo superfluo.",
+      "phrasesSecu" : "Concretar una teoría.",
+      "sinonimos" : [ "precisar", "puntualizar", "aclarar", "definir" ],
+      "video" : "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/palabras%2Fconcretar.mp4?alt=media&token=2aa56262-94f7-4751-b5e4-cadd94b5ba71",
+      "ejemplos": [
+        "Quedan por concretar los otros dos aspectos.",
+        "No puedo decir mucho más, pero puedo concretar un poco.",
+        "No acata las normas y parece decidido a concretar sus intenciones a pesar del rechazo internacional.",
+        "La detención se autoriza por el período necesario para concretar la expulsión.",
+        "Sin embargo, hemos intentado centrar y concretar un poco más para mejorar su eficiencia."
+      ],
+      "suelenantes": ["logró", "posible", "pudo", "necesario", "difícil", "preciso"],
+      "suelendespues": ["acuerdos", "proyectos", "acciones", "algo", "mejor", "negocios"]
+    }, 
+    {
+      "title" : "Contemplar",
+      "abrev" : "vb",
+      "abreviatura": "Verbo",
+      "contentPrim" : "Mirar con atención o con gusto",
+      "contentSecu" : "Tener en cuenta algo o a alguien, considerar",
+      "id" : 3,
+      "images" : [ "https://image.shutterstock.com/image-photo/focused-young-african-female-entrepreneur-450w-703779808.jpg", "https://image.shutterstock.com/image-photo/bearded-blogger-smartphone-hands-thinking-450w-1085821244.jpg", "https://image.shutterstock.com/image-photo/woman-sitting-on-mountain-top-450w-154578533.jpg", "https://image.shutterstock.com/image-photo/middle-age-woman-looking-sad-450w-619786028.jpg" ],
+      "lsc" : "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/contemplar.gif?alt=media&token=00cdaf12-979f-41f8-93c6-f1d02bb13aa7",
+      "lscImage" : "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/contemplar.jpg?alt=media&token=c03ccf55-f346-4650-8614-2373f2f97565",
+      "phrasesPrim" : "Sergio se pasó horas contemplando el paisaje",
+      "phrasesSecu" : "Contemplamos la posibilidad de cambiarnos de casa porque es muy pequeña en la que vivimos.",
+      "sinonimos" : [ "observar", "atender", "examinar", "mirar" ],
+      "video" : "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/palabras%2Fcontemplar.mp4?alt=media&token=5035b816-ec26-46f2-9731-8059a81f9c48",
+      "ejemplos": [
+        "Yo quiero poder contemplar aquí el resultado de su trabajo.",
+        "Estos trabajos deberían contemplar reformas valientes.",
+        "Ha venido para contemplar las ruinas de sus sueños europeos truncados.",
+        "Por tanto, solo podemos contemplar uno más.",
+        "Muchos niños con asma se ven imposibilitados para completar su educación primaria."
+      ],
+      "suelenantes": ["debe", "pudo", "debe", "podía", "permite", "posible"],
+      "suelendespues": ["todas", "mejor", "tanta", "toda", "situaciones", "algo"]
+    }, 
+    {
+      "title" : "Distinguir",
+      "abrev" : "tr",
+      "abreviatura": "Transitivo",
+      "antonimos" : [ "igualar, confundir, oscurecer", "mezclar" ],
+      "contentPrim" : "Conocer la diferencia que hay de unas cosas a otras",
+      "contentSecu" : "Considerar separadamente, diferenciar por alguna particularidad",
+      "id" : 4,
+      "images" : [ "https://image.shutterstock.com/image-illustration/stand-out-crowd-different-concept-450w-721556539.jpg", "https://image.shutterstock.com/image-illustration/stand-out-crowd-different-creative-450w-735397303.jpg", "https://image.shutterstock.com/image-photo/red-tulip-growth-among-white-450w-768146143.jpg", "https://image.shutterstock.com/image-photo/yellow-red-oranges-background-450w-477268543.jpg" ],
+      "lsc" : "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/distinguir.gif?alt=media&token=29d8da14-cdd3-41fa-8f52-b10fd08b9c62",
+      "lscImage" : "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/distinguir.jpg?alt=media&token=a23a0ad2-95e1-4f54-88df-ad2f314c93bb",
+      "phrasesPrim" : "Sólo puedo distinguir a los gemelos por sus voces, uno la tiene más ronca que el otro",
+      "phrasesSecu" : "Por el sabor no distingo bien el lenguado del gallo.",
+      "sinonimos" : [ "Diferenciar", "notar", "comprender", "analizar" ],
+      "video" : "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/palabras%2Fdistinguir.mp4?alt=media&token=d2dc88e6-3ffb-44ee-8e10-5b54cf19d088",
+      "ejemplos": [
+        "No sé distinguir a los gemelos entre sí.",
+        "También es importante distinguir entre los diferentes terceros países.",
+        "No pude distinguir si era hombre o mujer.",
+        "Conviene distinguir entre datos, información y conocimientos.",
+        "Únicamente cuando esto se consiga podremos distinguir realmente qué funciona y qué no."
+      ],
+      "suelenantes": ["posible", "necesario", "cabe", "difícil", "debemos", "conviene"],
+      "suelendespues": ["tres", "claramente", "cuatro", "productos", "varios", "cuidadosamente"]
+    } 
+  ],
+  "documentos": 
+  [
+    {
+      "id": 1,
+      "etiquetas": ["Filosofía", "Prof. Max", "Taller"],
+      "content": "Aristóteles considera que el fin que busca el hombre es la felicidad, que consiste en la vida contemplativa. La ética desemboca en la política. Aristóteles concibe al Estado como una comunidad de iguales que aspira a la mejor vida posible; una especie de ser natural que no surge como fruto de un pacto o acuerdo, sino que tiene sus raíces en la naturaleza de las cosas. El hombre es un animal social («zoon politikon») que desarrolla sus fines en el seno de una comunidad. La política del hombre se explica por su capacidad del lenguaje, único instrumento capaz de crear una memoria colectiva y un conjunto de leyes que diferencia lo permitido de lo prohibido.",
+      "title": "Filosofía política",
+      "video": "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/palabras%2Fimplicar.mp4?alt=media&token=f3b6e8a5-44a4-400f-af7a-bc76da6073af"
+    },
+    {
+      "id": 2,
+      "etiquetas": ["Filosofía", "Prof. Max", "Taller"],
+      "content": "Aristóteles en un fresco ubicado en Roma por Ludwig Seitz. Cabe resaltar que Aristóteles escribió dos tipos de textos: los destinados a la« publicación» fuera del Liceo o exotéricos(gr.exo 'fuera') y los utilizados como apuntes de clase o notas de conferencias, denominados esotéricos(gr.eso 'dentro').Lamentablemente, solo conservamos los esotéricos, los cuales al ser una recopilación de sus apuntes, vuelven un poco complicada su lectura, pues faltan las explicaciones, las transiciones son abruptas, los argumentos quedan en ocasiones inacabados...leer a Aristóteles es duro, lo que explica en parte que sus textos hayan sido interpretados y comentados a lo largo de dos mil años.",
+      "title": "Transmisión y problemas textuales",
+      "video": "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/palabras%2Fimplicar.mp4?alt=media&token=f3b6e8a5-44a4-400f-af7a-bc76da6073af"
+    },
+    {
+      "id": 3,
+      "etiquetas": ["Economía", "Prof. Ivana", "Taller"],
+      "content": "Es importante entender que por el tamaño de la economía de México, por desgracia no podemos hacer mucho para revertir lo que esta sucediendo a nivel mundial. Como país somos insignificantes para el problema mundial. Sin embargo el impacto de lo que pasa nos afecta. Por más que algunos políticos pueden echarle la culpa al gobierno actual, es solo propaganda política ya que el gobierno esta actuando de la mejor manera posible.",
+      "title": "Recomendaciones para la crisis ecónomica",
+      "video": "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/palabras%2Fimplicar.mp4?alt=media&token=f3b6e8a5-44a4-400f-af7a-bc76da6073af"
+    },
+    {
+      "id": 4,
+      "etiquetas": ["Reactjs", "Consejo", "Blog"],
+      "content": "Si hiciste una aplicación medianamente grande con React.js seguramente tuviste que configurar Babel, Webpack, un linter (ESLint?), un servidor de render, etc, etc., y de seguro sufriste la conocida Fatiga de JavaScript. Next.js es un pequeño framework construido sobre React.js que viene a ayudar a reducir esta fatiga.¿Cómo ? Next nos permite, instalando una sola dependencia, tener configurado todo lo que necesitamos para crear una aplicación de React usando Babel, Webpack, server render y muchas otras técnicas como HMR o separación de código y…¡ hasta hace más fácil hacer deploy de nuestras aplicaciones!",
+      "title": "El futuro de las aplicaciones con React",
+      "video": "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/palabras%2Fimplicar.mp4?alt=media&token=f3b6e8a5-44a4-400f-af7a-bc76da6073af"
+    },
+    {
+      "id": 5,
+      "etiquetas": ["Consejo", "Aprendizaje", "Blog"],
+      "content": "Si hiciste una aplicación medianamente grande con React.js seguramente tuviste que configurar Babel, Webpack, un linter (ESLint?), un servidor de render, etc, etc., y de seguro sufriste la conocida Fatiga de JavaScript. Next.js es un pequeño framework construido sobre React.js que viene a ayudar a reducir esta fatiga.¿Cómo ? Next nos permite, instalando una sola dependencia, tener configurado todo lo que necesitamos para crear una aplicación de React usando Babel, Webpack, server render y muchas otras técnicas como HMR o separación de código y…¡ hasta hace más fácil hacer deploy de nuestras aplicaciones!",
+      "title": "Cómo aprender lo que sea y crear equipos imparables",
+      "video": "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/palabras%2Fimplicar.mp4?alt=media&token=f3b6e8a5-44a4-400f-af7a-bc76da6073af"
+    },
+    {
+      "id": 6,
+      "etiquetas": ["Firebase", "Definición", "Blog"],
+      "content": "Cuando trabajes con Firebase la mayoría del tiempo tendrás dos cosas en común, una va a ser datos “real time” y usuarios que acceden a estos datos a través de una aplicación. En la industria profesional es muy común manejar niveles de acceso para usuarios, es decir, algunos tendrán mayor acceso preferencial a cierta información que otros.",
+      "title": "Aprende Firebase en un minuto",
+      "video": "https://firebasestorage.googleapis.com/v0/b/markerpinina.appspot.com/o/palabras%2Fimplicar.mp4?alt=media&token=f3b6e8a5-44a4-400f-af7a-bc76da6073af"
+    }
+  ]
+}

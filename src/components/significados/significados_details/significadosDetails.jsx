@@ -5,6 +5,7 @@ import classes from './SignificadosDetails.scss';
 import HeadignDetails from './heading_details/HeadingDetails';
 import ContentDetails from './contents_details/ContentDetails';
 import ImagesDetails from './images_details/ImagesDetails';
+import EjemplosDetails from './ejemplos_details/EjemplosDetails';
 
 class SignificadosDetails extends Component {
   state = {
@@ -61,7 +62,8 @@ class SignificadosDetails extends Component {
               <ImagesDetails {...significados} />
             </div>
             <div className={classes.BoxItem}>
-              <h4>Grámatica</h4>
+              <h4>Ejemplos</h4>
+              <EjemplosDetails {...significados} />
             </div>
           </div>
           <div className="col">

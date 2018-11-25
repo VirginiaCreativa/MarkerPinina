@@ -12,7 +12,6 @@ const paths = require('../webpack/paths');
 const logger = require('./logger.js');
 const home = require('./routes/home.js');
 const significados = require('./routes/significados.js');
-const significadosdetail = require('./routes/significadosdetail.js');
 const notascornell = require('./routes/notascornell.js');
 const documentos = require('./routes/documentos.js');
 const foros = require('./routes/foros.js');
@@ -20,7 +19,7 @@ const foros = require('./routes/foros.js');
 const compiler = webpack(webpackConfig);
 
 app.use(logger);
-app.use(express.static(paths.outputPath));
+app.use(express.static(paths.entryPath.index));
 app.use(bodyParser.json());
 
 app.use(
@@ -41,7 +40,6 @@ app.use(
 // ROUTER
 app.use('/', home);
 app.use('/significados', significados);
-app.use('/significados/:id', significados);
 app.use('/notascornell', notascornell);
 app.use('/documentos', documentos);
 app.use('/foros', foros);
