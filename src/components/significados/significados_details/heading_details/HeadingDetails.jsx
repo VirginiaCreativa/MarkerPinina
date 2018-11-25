@@ -5,11 +5,11 @@ const HeadingDetails = ({ title, abrev, abreviatura }) => (
   <div className={classes.HeadingDetails}>
     <h1>
       {title}
-      <abb title={abreviatura} className={[classes.Abrev, 'tag'].join(' ')}>
+      <span title={abreviatura} className={[classes.Abrev, 'tag'].join(' ')}>
         {abrev}
-      </abb>
+      </span>
     </h1>
   </div>
 );
-1;
+
 export default HeadingDetails;

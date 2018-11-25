@@ -1,9 +1,13 @@
 import React from 'react';
 import classes from './ImagesDetails.scss';
 
-const ImagesDetails = ({ images }) => (
+const ImagesDetails = ({ title, images }) => (
   <div className={classes.ImagesDetails}>
-    <h1>image</h1>
+    {images.map(img => (
+      <div className={classes.Images} key={img}>
+        <img src={img} alt={title} />
+      </div>
+    ))}
   </div>
 );
 

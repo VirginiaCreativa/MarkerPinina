@@ -58,11 +58,10 @@ class SignificadosDetails extends Component {
             </div>
             <div className={classes.BoxItem}>
               <h4>Imagenes</h4>
-              <ImagesDetails />
+              <ImagesDetails {...significados} />
             </div>
             <div className={classes.BoxItem}>
               <h4>Grámatica</h4>
-              <ImagesDetails />
             </div>
           </div>
           <div className="col">
