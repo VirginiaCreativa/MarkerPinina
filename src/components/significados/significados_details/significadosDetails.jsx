@@ -39,7 +39,6 @@ class SignificadosDetails extends Component {
     const { significados, loading } = this.state;
 
     if (loading) return <Spinner />;
-
     return (
       <div className={classes.SignificadosDetails}>
         <HeadignDetails
@@ -48,7 +47,7 @@ class SignificadosDetails extends Component {
           abreviatura={significados.abreviatura}
         />
         <div className="row">
-          <div className="col">
+          <div className="col-7">
             <div className={classes.BoxItem}>
               <ContentDetails
                 contentPrim={significados.contentPrim}
@@ -63,10 +62,10 @@ class SignificadosDetails extends Component {
             </div>
             <div className={classes.BoxItem}>
               <h4>Ejemplos</h4>
-              <EjemplosDetails {...significados} />
+              <EjemplosDetails {...significados} refLists={this.setRef} />
             </div>
           </div>
-          <div className="col">
+          <div className="col-5">
             <h2>Video</h2>
           </div>
         </div>
