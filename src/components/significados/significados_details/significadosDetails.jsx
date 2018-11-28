@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { database } from '../../../config/firebase';
 import Spinner from '../../common/spinner/Spinner';
 import classes from './SignificadosDetails.scss';
@@ -73,4 +74,7 @@ class SignificadosDetails extends Component {
     );
   }
 }
-export default SignificadosDetails;
+const mapStateToProps = state => ({
+  significados: state.significados,
+});
+export default connect(mapStateToProps)(SignificadosDetails);

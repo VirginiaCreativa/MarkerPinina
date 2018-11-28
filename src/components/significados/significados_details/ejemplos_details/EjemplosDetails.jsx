@@ -4,14 +4,14 @@ import React from 'react';
 import classes from './EjemplosDetails.scss';
 
 const EjemplosDetails = ({ ejemplos, suelenantes, suelendespues, title }) => {
-  function replaceWord(marker, items) {
+  const replaceWord = (marker, items) => {
     let titleReg = marker;
     titleReg = titleReg.toLowerCase();
     const re = new RegExp(titleReg, 'g');
     const titleHTML = '<span class="bold">' + titleReg + '</span>';
     const words = items.replace(re, titleHTML);
     return { __html: words };
-  }
+  };
   return (
     <div className={classes.EjemplosDetails}>
       <div className="row">

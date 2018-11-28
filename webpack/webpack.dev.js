@@ -7,7 +7,7 @@ module.exports = {
     filename: '[name].js',
     path: commonPaths.outputPath,
     chunkFilename: '[name].js',
-    // libraryTarget: 'commonjs2',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -56,6 +56,7 @@ module.exports = {
     },
   },
   plugins: [
+    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
   ],

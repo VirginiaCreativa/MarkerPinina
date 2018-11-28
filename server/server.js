@@ -19,11 +19,12 @@ const foros = require('./routes/foros.js');
 const compiler = webpack(webpackConfig);
 
 app.use(logger);
-app.use(express.static(paths.entryPath.index));
+app.use(express.static(paths.templatePath));
 app.use(bodyParser.json());
 
 app.use(
   middleware(compiler, {
+    hot: true,
     noInfo: true,
     publicPath: webpackConfig.dev,
   }),

@@ -1,37 +1,26 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import { withRouter } from 'react-router-dom';
-import { database } from '../../../config/firebase';
+import { connect } from 'react-redux';
+import { fetchSignificados } from '../../../actions/significadosActions';
 import SignificadoItem from './significado_item/SignificadoItem';
 import Spinner from '../../common/spinner/Spinner';
 
 class SignificadosList extends Component {
-  state = {
-    significados: [],
-    loading: true,
-  };
+  state = {};
 
   componentDidMount() {
-    axios
-      .get('/significados')
-      .then(response => {
-        this.setState({
-          significados: response.data,
-          loading: false,
-        });
-      })
-      .catch(error => {
-        console.log(error);
-        this.setState({ loading: true });
-      });
+    this.props.dispatch(fetchSignificados());
+    console.log('COMPDIDMOUNT:', this.props.dispatch(fetchSignificados()));
   }
 
   render() {
-    const { significados, loading } = this.state;
+    const { significados, loading, error } = this.props;
 
-    let significadosLoad = <Spinner />;
+    let significadosLoad;
     let loadingSpinner = null;
 
+    if (error) {
+      return <div>Error! {error}</div>;
+    }
     if (loading) {
       loadingSpinner = <Spinner />;
     }
@@ -50,12 +39,15 @@ class SignificadosList extends Component {
         </>
       );
     }
-    return (
-      <>
-        {loadingSpinner}
-        {significadosLoad}
-      </>
-    );
+    return <>{significadosLoad}</>;
   }
 }
-export default withRouter(SignificadosList);
+const mapStateToProps = state => {
+  console.log('mapStateToProps ====>', state);
+  return {
+    significados: state.significados,
+    loading: state.loading,
+    error: state.error,
+  };
+};
+export default connect(mapStateToProps)(SignificadosList);
