@@ -7,12 +7,6 @@ import {
   REQ_SIGNIFICADOS_FAILURE,
 } from './types';
 
-export function getSignificadosBegin() {
-  return {
-    type: REQ_SIGNIFICADOS_BEGIN,
-  };
-}
-
 export function getSignificados() {
   return dispatch => {
     dispatch({ type: REQ_SIGNIFICADOS_BEGIN });
