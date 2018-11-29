@@ -8,32 +8,35 @@ import {
 const initialState = {
   significados: [],
   loading: false,
-  error: null,
+  error: false,
 };
 
-export default function significadosReducer(state = initialState, action) {
+function significadosReducer(state = initialState, action) {
   switch (action.type) {
     case REQ_SIGNIFICADOS_BEGIN:
       return {
         ...state,
+        error: false,
         loading: true,
-        error: null,
+        significados: false,
       };
     case REQ_SIGNIFICADOS_SUCESS:
-      console.log('====> REDUCER', action.payload);
+      console.log('====> REDUCER SIGNF', state);
       return {
         ...state,
         loading: false,
-        significados: action.payload.significados,
+        error: false,
+        significados: action.payload,
       };
     case REQ_SIGNIFICADOS_FAILURE:
       return {
         ...state,
+        error: true,
         loading: false,
-        error: action.payload.error,
-        significados: [],
+        significados: false,
       };
     default:
       return state;
   }
 }
+export default significadosReducer;
