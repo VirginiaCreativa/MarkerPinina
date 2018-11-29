@@ -1,59 +1,36 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { connect } from 'react-redux';
+import { getSignificados } from '../../../store/actions/significadosActions';
 import SignificadoItem from './siginificado_item/SignificadoItem';
 import Spinner from '../../common/spinner/Spinner';
 
 class SignificadosGrid extends Component {
-  state = {
-    significados: [],
-    videoLoading: false,
-    loading: true,
-  };
-
   componentDidMount() {
-    axios
-      .get('/significados')
-      .then(response => {
-        this.setState({
-          significados: response.data,
-          videoLoading: true,
-          loading: false,
-        });
-      })
-      .catch(error => {
-        console.log(error);
-        this.setState({ loading: true });
-      });
+    this.props.dispatch(getSignificados());
   }
 
   render() {
-    const { significados, loading, videoLoading } = this.state;
+    const { significados, loading, videoLoading, error } = this.props;
 
-    let significadosLoad = <Spinner />;
-    let loadingSpinner = null;
-
+    if (error) {
+      return <h1>ERROR! {error}</h1>;
+    }
     if (loading) {
-      loadingSpinner = <Spinner />;
+      return <Spinner />;
     }
     if (significados) {
-      significadosLoad = (
-        <>
-          {significados.map(sig => (
-            <SignificadoItem
-              key={sig.id}
-              {...sig}
-              VideoLoading={videoLoading}
-            />
-          ))}
-        </>
-      );
+      return significados.map(sig => (
+        <SignificadoItem key={sig.id} {...sig} VideoLoading={videoLoading} />
+      ));
     }
-    return (
-      <>
-        {loadingSpinner}
-        {significadosLoad}
-      </>
-    );
+    return <>{significados}</>;
   }
 }
-export default SignificadosGrid;
+const mapStateToProps = state => ({
+  significados: state.signs.significados,
+  loading: state.signs.loading,
+  error: state.signs.error,
+  videoLoading: state.signs.videoLoading,
+});
+export default connect(mapStateToProps)(SignificadosGrid);

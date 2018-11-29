@@ -9,6 +9,7 @@ const initialState = {
   significados: [],
   loading: false,
   error: false,
+  videoLoading: false,
 };
 
 function significadosReducer(state = initialState, action) {
@@ -21,12 +22,12 @@ function significadosReducer(state = initialState, action) {
         significados: false,
       };
     case REQ_SIGNIFICADOS_SUCESS:
-      console.log('====> REDUCER SIGNF', state);
       return {
         ...state,
         loading: false,
         error: false,
         significados: action.payload,
+        videoLoading: true,
       };
     case REQ_SIGNIFICADOS_FAILURE:
       return {
