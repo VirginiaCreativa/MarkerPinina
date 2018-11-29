@@ -21,8 +21,8 @@ class SignificadosList extends Component {
     if (significados) {
       return significados.map(sign => (
         <SignificadoItem
-          key={sign.id}
           {...sign}
+          key={sign.id}
           images={sign.images[0]}
           link={'/significadosdetail/' + sign.id}
         />

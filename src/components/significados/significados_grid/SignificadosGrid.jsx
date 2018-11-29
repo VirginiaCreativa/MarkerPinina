@@ -21,7 +21,12 @@ class SignificadosGrid extends Component {
     }
     if (significados) {
       return significados.map(sig => (
-        <SignificadoItem key={sig.id} {...sig} VideoLoading={videoLoading} />
+        <SignificadoItem
+          link={'/significadosdetail/' + sig.id}
+          key={sig.id}
+          {...sig}
+          VideoLoading={videoLoading}
+        />
       ));
     }
     return <>{significados}</>;
