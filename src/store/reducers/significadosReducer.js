@@ -19,7 +19,6 @@ function significadosReducer(state = initialState, action) {
         ...state,
         error: false,
         loading: true,
-        significados: false,
       };
     case REQ_SIGNIFICADOS_SUCESS:
       return {
@@ -34,7 +33,6 @@ function significadosReducer(state = initialState, action) {
         ...state,
         error: true,
         loading: false,
-        significados: false,
       };
     default:
       return state;

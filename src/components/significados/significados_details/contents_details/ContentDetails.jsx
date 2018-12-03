@@ -1,26 +1,21 @@
 import React from 'react';
 import classes from './ContentDetails.scss';
 
-const ContentDetails = ({
-  contentPrim,
-  contentSecu,
-  phrasesPrim,
-  phrasesSecu,
-}) => (
+const ContentDetails = ({ significados }) => (
   <div className={classes.ContentDetails}>
     <div className={classes.Wrapper}>
       <p className={classes.Definition}>
         <i className="bx bx-chevrons-right" />
-        {contentPrim}:
+        {significados.contentPrim}:
       </p>
-      <p className={classes.Phrases}>{phrasesPrim}</p>
+      <p className={classes.Phrases}>{significados.phrasesPrim}</p>
     </div>
     <div className={classes.Wrapper}>
       <p className={classes.Definition}>
         <i className="bx bx-chevrons-right" />
-        {contentSecu}:
+        {significados.contentSecu}:
       </p>
-      <p className={classes.Phrases}>{phrasesSecu}</p>
+      <p className={classes.Phrases}>{significados.phrasesSecu}</p>
     </div>
   </div>
 );

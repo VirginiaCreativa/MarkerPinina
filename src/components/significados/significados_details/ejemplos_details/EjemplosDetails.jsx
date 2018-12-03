@@ -3,7 +3,7 @@
 import React from 'react';
 import classes from './EjemplosDetails.scss';
 
-const EjemplosDetails = ({ ejemplos, suelenantes, suelendespues, title }) => {
+const EjemplosDetails = ({ significado }) => {
   const replaceWord = (marker, items) => {
     let titleReg = marker;
     titleReg = titleReg.toLowerCase();
@@ -18,31 +18,39 @@ const EjemplosDetails = ({ ejemplos, suelenantes, suelendespues, title }) => {
         <div className="col">
           <h6>Ejemplos</h6>
           <ul>
-            {ejemplos.map(item => (
-              <li key={item}>
-                <div dangerouslySetInnerHTML={replaceWord(title, item)} />
-              </li>
-            ))}
+            {significado &&
+              significado.map(item => (
+                <li key={item}>
+                  <div
+                    dangerouslySetInnerHTML={replaceWord(
+                      significado.title,
+                      item,
+                    )}
+                  />
+                </li>
+              ))}
           </ul>
         </div>
         <div className="col">
           <h6>Suelen venir antes</h6>
           <ul>
-            {suelenantes.map(item => (
-              <li key={item} className={classes.Minusculas}>
-                <span>{item}</span> {title}
-              </li>
-            ))}
+            {significado &&
+              significado.map(item => (
+                <li key={item} className={classes.Minusculas}>
+                  <span>{item}</span> {significado.title}
+                </li>
+              ))}
           </ul>
         </div>
         <div className="col">
           <h6>Suelen venir después</h6>
           <ul>
-            {suelendespues.map(item => (
-              <li key={item}>
-                {title} <span>{item}</span>
-              </li>
-            ))}
+            {significado &&
+              significado.map(item => (
+                <li key={item}>
+                  {significado.title} <span>{item}</span>
+                </li>
+              ))}
           </ul>
         </div>
       </div>

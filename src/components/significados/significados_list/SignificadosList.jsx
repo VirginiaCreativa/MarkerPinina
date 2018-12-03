@@ -12,12 +12,10 @@ class SignificadosList extends Component {
   render() {
     const { significados, loading, error } = this.props;
 
-    if (error) {
-      return <h1>ERROR! {error}</h1>;
-    }
-    if (loading) {
-      return <Spinner />;
-    }
+    if (error) return <h1>ERROR 404!</h1>;
+
+    if (loading) return <Spinner />;
+
     if (significados) {
       return significados.map(sign => (
         <SignificadoItem

@@ -10,8 +10,7 @@ const webpackConfig = require('../webpack.config.js');
 
 const paths = require('../webpack/paths');
 const logger = require('./logger.js');
-const home = require('./routes/home.js');
-const significados = require('./routes/significados.js');
+const routes = require('./routes.js');
 const notascornell = require('./routes/notascornell.js');
 const documentos = require('./routes/documentos.js');
 const foros = require('./routes/foros.js');
@@ -39,8 +38,7 @@ app.use(
 );
 
 // ROUTER
-app.use('/', home);
-app.use('/significados', significados);
+app.use('/', routes);
 app.use('/notascornell', notascornell);
 app.use('/documentos', documentos);
 app.use('/foros', foros);
