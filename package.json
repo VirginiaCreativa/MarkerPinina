@@ -17,6 +17,11 @@
       "git add"
     ]
   },
+  "electronWebpack": {
+    "whiteListedModules": [
+      "firebase"
+    ]
+  },
   "jest": {
     "testEnvironment": "jsdom",
     "moduleDirectories": [
@@ -49,9 +54,10 @@
     "npm": ">=3"
   },
   "dependencies": {
-    "firebase": "^5.5.8",
+    "firebase": "^5.6.0",
+    "firebase-admin": "^6.3.0",
     "lodash": "4.17.11",
-    "npm-check-updates": "^2.14.2",
+    "npm-check-updates": "^2.15.0",
     "prop-types": "15.6.2",
     "react": "16.6.0",
     "react-dom": "16.6.0",
@@ -61,6 +67,7 @@
     "react-router-dom": "^4.3.1",
     "react-router-redux": "^4.0.8",
     "redux": "^4.0.1",
+    "redux-firestore": "^0.6.0",
     "redux-thunk": "^2.3.0"
   },
   "resolutions": {
@@ -111,7 +118,6 @@
     "express": "^4.16.4",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "2.0.0",
-    "firebase-admin": "^6.3.0",
     "html-webpack-plugin": "3.2.0",
     "husky": "1.1.2",
     "i": "^0.3.6",

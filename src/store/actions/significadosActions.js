@@ -1,4 +1,4 @@
-import { database } from '../../config/firebase';
+import { database } from '../../config/firebase/firebaseInit';
 
 import {
   REQ_SIGNIFICADOS_BEGIN,
@@ -7,9 +7,8 @@ import {
 } from './types';
 
 export function getSignificados(significados) {
-  return dispatch => {
-    dispatch({ type: REQ_SIGNIFICADOS_BEGIN });
-    return database
+  return dispatch =>
+    database
       .ref('significados')
       .once('value')
       .then(snapshot => {
@@ -26,29 +25,28 @@ export function getSignificados(significados) {
         });
         throw error;
       });
-  };
 }
 
-export function getSignificadosID(params, significados) {
-  const ids = params - 1;
-  return dispatch => {
-    dispatch({ type: REQ_SIGNIFICADOS_BEGIN });
-    return database
-      .ref('significados' + ids)
-      .once('value')
-      .then(snapshot => {
-        dispatch({
-          type: REQ_SIGNIFICADOS_SUCESS,
-          payload: snapshot.val(),
-          significados,
-        });
-      })
-      .catch(error => {
-        dispatch({
-          type: REQ_SIGNIFICADOS_FAILURE,
-          error,
-        });
-        throw error;
-      });
-  };
-}
+// export function getSignificadosID(params, significados) {
+//   const ids = params - 1;
+//   return (dispatch, { getFireStoreReducer, getFireBaseReducer }) => {
+//     dispatch({ type: REQ_SIGNIFICADOS_BEGIN });
+//     return database
+//       .ref('significados' + ids)
+//       .once('value')
+//       .then(snapshot => {
+//         dispatch({
+//           type: REQ_SIGNIFICADOS_SUCESS,
+//           payload: snapshot.val(),
+//           significados,
+//         });
+//       })
+//       .catch(error => {
+//         dispatch({
+//           type: REQ_SIGNIFICADOS_FAILURE,
+//           error,
+//         });
+//         throw error;
+//       });
+//   };
+// }

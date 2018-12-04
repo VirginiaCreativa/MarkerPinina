@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { getSignificadosID } from '../../../store/actions/significadosActions';
+// import { getSignificadosID } from '../../../store/actions/significadosActions';
 import Spinner from '../../common/spinner/Spinner';
 import classes from './SignificadosDetails.scss';
 import HeadignDetails from './heading_details/HeadingDetails';
@@ -10,11 +10,11 @@ import ImagesDetails from './images_details/ImagesDetails';
 import EjemplosDetails from './ejemplos_details/EjemplosDetails';
 
 class SignificadosDetails extends Component {
-  componentDidMount() {
-    this.props.dispatch(
-      getSignificadosID(this.props.match.params.id, this.props.significados),
-    );
-  }
+  // componentDidMount() {
+  //   this.props.dispatch(
+  //     getSignificadosID(this.props.match.params.id, this.props.significados),
+  //   );
+  // }
 
   render() {
     const { significados, loading, error } = this.props;

@@ -1,7 +1,4 @@
-const firebase = require('firebase/app');
-require('firebase/database');
-
-const config = {
+const firebaseConfig = {
   apiKey: 'AIzaSyDXDmsRZqK6uZstYh1_-9AGGkOg6XJMizA',
   authDomain: 'markerpinina.firebaseapp.com',
   databaseURL: 'https://markerpinina.firebaseio.com',
@@ -9,7 +6,5 @@ const config = {
   storageBucket: 'markerpinina.appspot.com',
   messagingSenderId: '166963697458',
 };
-firebase.initializeApp(config);
 
-const database = firebase.database();
-export { database };
+export { firebaseConfig };

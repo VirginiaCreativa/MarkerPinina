@@ -1,18 +1,7 @@
 const express = require('express');
-const admin = require('firebase-admin');
+const db = require('./firebase/firebase');
 
 const router = express.Router();
-const serviceAccount = require('./firebase/serviceAccountKey.json');
-
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: 'https://markerpinina.firebaseio.com',
-});
-const db = admin.firestore();
-const settings = {
-  timestampsInSnapshots: true,
-};
-db.settings(settings);
 
 router.get('/', async (req, res, next) => {
   try {
